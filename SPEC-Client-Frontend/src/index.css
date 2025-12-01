@@ -1,0 +1,352 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+@import 'react-owl-carousel2/lib/styles.css';
+@import 'react-owl-carousel2/src/owl.theme.default.css';
+
+ .allison-regular {
+   font-family: "Allison", cursive;
+   font-weight: 400;
+   font-style: normal;
+ }
+
+ font {
+   font-family: "Montserrat", sans-serif;
+
+ }
+
+ :root {
+   --brown: #C59B5F;
+   --yellow: #F3E648;
+   --navyblue: #95C8C8;
+   --grey: #2A2928;
+   --black: #110A00;
+   --grey-text: #A29D97;
+   --b-grey: #4d4740;
+   --bgbrown: #FFF8EE;
+ }
+
+ h3 {
+   font-family: "Allison", cursive;
+   font-size: 70px;
+   margin-bottom: -6px;
+
+ }
+
+ body {
+   font-family: "Montserrat", sans-serif;
+   background-color: #FFFDFA;
+ }
+ /* Desktop BATH Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: #fffdfa;
+  padding: 8px 0;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 4px;
+  z-index: 2000;
+
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 4px 15px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .3s;
+}
+
+.dropdown-menu li a:hover {
+  color: #d6a84a;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important;
+  }
+}
+  
+
+ h1 {
+   font-size: 70px;
+   line-height: 70px;
+   line-height: none;
+ }
+
+ h2 {
+   line-height: none;
+ }
+
+ h5{
+     font-family: "Allison", cursive;
+       margin-bottom: -6px;
+
+ }
+ .bor {
+   visibility: hidden;
+ }
+
+ /* Show on hover */
+ .fo-con:hover .bor {
+   visibility: visible;
+ }
+
+ /* Show when active (clicked) */
+ .active .bor {
+   visibility: visible !important;
+ }
+
+ 
+ .active {
+   background-color: #FFF7EB !important;
+ }
+
+
+ .hero-bg {
+   background: url('assets/images/banner.png') center/cover no-repeat;
+ }
+
+ .bg-image {
+   background-image: url(./assets/images/bg-image.png);
+   background-size:cover;
+  
+ }
+
+ .bgour {
+   background:
+
+     url("./assets/images/bg-our.png") no-repeat center,
+
+     url("./assets/images/bg-cream.jpg") repeat top left, #fff8ee;
+ }
+
+ .bg-play {
+   background-image: url("./assets//images//image3.png");
+   background-position: center;
+   background-size: contain;
+ }
+
+ 
+
+
+
+
+ .scrollbar {
+   scrollbar-width: none;
+
+ }
+
+ ::placeholder {
+   color: var(--b-grey);
+ }
+
+ .bg-ex{
+background: url('./assets//images//bg-ex.png') center center no-repeat; background-attachment: fixed;
+background-size: cover;
+ }
+
+
+
+ .icon-box {
+   background-size: 0%;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: background-image 0.2s linear,
+     background-color 0.25s ease,
+     filter 0.25s ease;
+ }
+
+ .icon-box:hover {
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: background-image 0.2s linear,
+     background-color 0.25s ease,
+     filter 0.25s ease;
+ }
+
+ .icon-box:hover .icon-img {
+   filter: brightness(0) invert(1);
+ }
+
+
+ .icon-box:hover .icon-img {
+   filter: brightness(0) invert(1);
+   transition: background-image 0.1s linear,
+     background-color 0.1s ease,
+     filter 0.1s ease;
+     
+ }
+
+ .icon-box:hover + .item-name {
+  color: var(--brown) !important;
+
+}
+
+.arrowicon{
+  height: 17px;
+  width: 17px;
+
+}
+.slide-ac:hover {
+   .view-bg{
+  background-color: var(--brown);
+  
+   }
+ .ac-title{
+  color: white;
+ }
+ .ac-button{
+  color: white;
+ }
+ .star{
+   filter: brightness(0) invert(1);
+ }
+
+ }
+.slide-ac .ac-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Default underline (brown + short) */
+.slide-ac .ac-button::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 20%; /* You can adjust */
+  height: 2px;
+  background: var(--brown);
+  transition: width 0.4s ease, background 0.3s ease;
+}
+
+
+.slide-ac:hover .ac-button::before {
+  width: 100%; 
+  background: white;
+}
+
+ button{
+  box-shadow: none !important;
+ }
+.scrollbar-none{
+scrollbar-width: none;
+}
+
+.menu-bar li a:hover{
+  color: var(--brown);
+  transition: 300ms;
+
+}
+nav ul li a:hover{
+   color: var(--brown);
+  transition: 300ms;
+}
+.nav-height{
+  height: inherit;
+}
+
+.bg-cat{
+  background-image: url(assets/images/bg-cat.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+@layer utilities {
+  /* Submenu slide from right */
+  .submenu-slide-in {
+    animation: submenuIn 0.45s ease forwards;
+  }
+
+  /* Submenu slide to right when closing */
+  .submenu-slide-out {
+    animation: submenuOut 0.45s ease forwards;
+  }
+
+  @keyframes submenuIn {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0%); opacity: 1; }
+  }
+
+  @keyframes submenuOut {
+    0% { transform: translateX(0%); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+}
+
+
+ @media (min-width:375px) and (max-width:640px) {
+   h1 {
+  font-size: 30px!important;
+  font-weight: bold !important;
+   line-height: normal !important;
+
+   }
+
+   h3 {
+   font-size: 30px !important;
+   line-height: normal !important;
+     margin-bottom: -5px !important;
+   }
+   .icon{
+    height: 38px;
+    width: 38px;
+   }
+
+  
+   .res-footer{
+    display: flex !important;
+    justify-content: center;
+   }
+   .ph{
+    font-size: 12px;
+ 
+   }
+   .f-icon{
+    height: 13px;
+    width: 13px;
+   }
+   .bg-image {
+   background-image: url("./assets/images/bg-product.png");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+ }
+  .bg-ex{
+background: url('./assets//images//bg-ex.png') center center no-repeat; background-attachment: fixed;
+ }
+ .bg-cat{
+ 
+  background-position: center;
+
+
+ }
+ }
+
+
+ @media (min-width:1536px) and (max-width:1800px) {
+   h1 {
+     font-size: 35px;
+   }
+   h3 {
+     font-size: 35px;
+   }
+ }
