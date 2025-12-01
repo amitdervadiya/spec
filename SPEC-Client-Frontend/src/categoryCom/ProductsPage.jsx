@@ -160,7 +160,7 @@ export default function ProductsPage() {
           {sortedProducts.map((p, idx) => (
             <div key={idx} className="bg-white slide-ac h-max  transition-all duration-300 border group">
               <img src={p.image} className="h-[350px] w-full" />
-              <div className=" p-4 gap-5 view-bg flex flex-col h-max">
+              <div className=" p-4 gap-5  view-bg flex flex-col ">
                 <div className="flex items-center justify-between  mb-1">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
@@ -171,7 +171,7 @@ export default function ProductsPage() {
                   <p className="text-[var(--grey-text)] font-semibold text-[18px] "> ss : <span className="text-[var(--black)] ">{p.steelType}</span></p>
                 </div>
         <div>
-                  <h2 className="text-[var(--black)] text-[22px] font-bold">{p.name}</h2>
+                  <h2 className="text-[var(--black)] text-[22px] font-bold max-2xl:text-[20px]">{p.name}</h2>
                 <p className="font-semibold text-[17px] text-[var(--grey-text)]">code : <span className="text-[var(--black)]">{p.code}</span></p>
 
         </div>
@@ -182,7 +182,6 @@ export default function ProductsPage() {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

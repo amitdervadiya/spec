@@ -88,8 +88,7 @@ export default function FooterSection() {
         <div className="w-full  border-b border-[#D7D7D7]  border-opacity-[15%] pb-[15px]">
           <button
             onClick={() => toggle("contact")}
-            className="w-full flex justify-between items-center py-3 text-white text-[18px] font-semibold"
-          >
+            className="w-full flex justify-between items-center py-3 text-white text-[18px] font-semibold">
             CONTACT US
             <img
               src={openMenu === "contact" ? up : down}

@@ -2,6 +2,7 @@ import React from 'react'
 import ProductsPage from '../categoryCom/ProductsPage'
 import NavbarHero from '../components/NavbarHero'
 import Catheader from '../categoryCom/Catheader'
+import Qna from '../categoryCom/Qna'
 
 export default function category() {
   return (
@@ -9,6 +10,7 @@ export default function category() {
    <NavbarHero/>
    <Catheader/>
    <ProductsPage/>
+   <Qna/>
 
    </>
   )
