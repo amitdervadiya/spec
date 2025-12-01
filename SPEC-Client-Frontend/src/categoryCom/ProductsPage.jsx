@@ -158,7 +158,7 @@ export default function ProductsPage() {
 
         <div className="grid grid-cols-3 mt-[30px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
           {sortedProducts.map((p, idx) => (
-            <div key={idx} className="bg-white slide-ac  transition-all duration-300 border group">
+            <div key={idx} className="bg-white slide-ac h-max  transition-all duration-300 border group">
               <img src={p.image} className="h-[350px] w-full" />
               <div className=" p-4 gap-5 view-bg flex flex-col h-max">
                 <div className="flex items-center justify-between  mb-1">

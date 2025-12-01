@@ -100,7 +100,8 @@ export default function FooterSection() {
           {openMenu === "contact" && (
             <div className="mt-2 flex flex-col gap-4 text-[16px] text-[var(--grey-text)]">
               <div className="flex gap-2 items-center">
-                <img src={fp} className="h-5 w-5" /> +91 98791 66592
+                <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt=""  className="w-5 h-5"/> +91 98791 66592</a>
+
               </div>
               <div className="flex gap-2 items-start">
                 <img src={fmap} className="h-5 w-5 mt-1" /> Kotarda, Rajkot, Gujarat 360022
@@ -214,12 +215,12 @@ export default function FooterSection() {
               </p>
 
 
-   <div className="h-[18px] w-[1px] bg-black opacity-[20%] translate-x-[50%]  absolute left-[50%] sm:hidden "></div>
+              <div className="h-[18px] w-[1px] bg-black opacity-[20%] translate-x-[50%]  absolute left-[50%] sm:hidden "></div>
 
 
 
               <div className="flex items-center gap-2 max-sm:gap-[20px]    text-[18px] font-medium ph">
-             
+
                 <div className="flex gap-[8px] max-sm:gap-[4px]">
                   <img src={phone} alt="" className="h-[22px] w-[22px] max-sm:h-[17px] max-sm:w-[17px]" />
                   <a href={item.phonelink}>{item.phone}</a>
@@ -294,8 +295,8 @@ export default function FooterSection() {
                 <h4 className="text-white font-semibold  text-[20px]  mb-[20px]">CONTACT US</h4>
 
                 <div className="space-y-[20px] text-[18px] mt-[27px] text-[var(--grey-text)]">
-                  <div className="flex gap-[10px]  items-center">
-                 <a href="tel:+9879166592" >   <img src={fp} alt="" /> +91 98791 66592</a>
+                  <div className="  items-center">
+                    <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt="" className="w-5 h-5" /> +91 98791 66592</a>
                   </div>
                   <div className="flex gap-[10px]  items-start ">
                     <img src={fmap} alt="" className="mt-[3px]" /> Kotarda, Rajkot, Gujarat 360022
