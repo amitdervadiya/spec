@@ -96,7 +96,7 @@ export default function AccessoriesSection() {
   return (
     <section className="w-full mt-[176px] max-sm:h-max max-sm:px-4 max-sm:mt-[50px] max-lg:px-12 relative">
       <div className="absolute max-sm:hidden h-[290px] w-[40%] bg-[#FFF8EE] right-0 -bottom-[60px]"></div>
-      <div className="mx-auto flex w-[85%] flex-col lg:flex-row items-center gap-10">
+      <div className="mx-auto flex w-[85%] flex-col lg:flex-row items-center gap-10 max-sm:gap-[20px]">
 
         {/* Left Section */}
         <div className="max-sm:w-full text-center lg:text-left">

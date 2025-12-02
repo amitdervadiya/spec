@@ -168,11 +168,11 @@ export default function ProductsPage() {
                     ))}
                   </div>
 
-                  <p className="text-[var(--grey-text)] font-semibold text-[18px] "> ss : <span className="text-[var(--black)] ">{p.steelType}</span></p>
+                  <p className="text-[var(--grey-text)] font-semibold text-[18px] h-white"> ss : <span className="text-[var(--black)] h-white">{p.steelType}</span></p>
                 </div>
         <div>
-                  <h2 className="text-[var(--black)] text-[22px] font-bold max-2xl:text-[20px]">{p.name}</h2>
-                <p className="font-semibold text-[17px] text-[var(--grey-text)]">code : <span className="text-[var(--black)]">{p.code}</span></p>
+                  <h2 className="text-[var(--black)] text-[22px] font-bold max-2xl:text-[20px] h-white">{p.name}</h2>
+                <p className="font-semibold text-[17px] text-[var(--grey-text)] h-white">code : <span className="text-[var(--black)] h-white">{p.code}</span></p>
 
         </div>
                 <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[15px] font-bold flex items-center gap-1">

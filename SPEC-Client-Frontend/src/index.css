@@ -216,6 +216,9 @@ background-size: cover;
  .star{
    filter: brightness(0) invert(1);
  }
+ .h-white{
+  color: #fffdfa;
+ }
 
  }
 .slide-ac .ac-button {

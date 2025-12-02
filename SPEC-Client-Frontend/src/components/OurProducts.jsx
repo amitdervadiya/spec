@@ -21,7 +21,7 @@ export default function OurProducts() {
       dotTablet: { top: "48%", left: "50%" },
       dotLaptop: { top: "50%", left: "57%" },
       dotDesktop: { top: "50%", left: "55%" },
-      dotUltra: { top: "50%", left: "25%" }, // NEW
+      dotUltra: { top: "50%", left: "48%" }, // NEW
     },
     {
       name: "TOWEL RACK",
@@ -112,7 +112,7 @@ export default function OurProducts() {
 
   return (
     <>
-      <div className="w-full bgour h-[1091px] max-sm:mt-[50px] max-sm:h-[595px] mt-[140px] flex justify-center ">
+      <div className="w-full bgour h-[1091px] max-sm:mt-[50px] max-sm:h-[595px] mt-[140px] max flex justify-center ">
         <div className="w-[85%] flex max-sm:justify-start justify-end ">
           <section className="w-full z-0 mt-[100px] max-sm:mt-[40px]">
             <div className="text-center mb-10 max-sm:mb-[25px]">

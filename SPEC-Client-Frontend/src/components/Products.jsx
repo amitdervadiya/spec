@@ -7,7 +7,7 @@ import arrowright from "../assets/images/ArrowRight(1).svg"
 export default function Products() {
   return (
     <>
-      <div className="items-center max-sm:h-max justify-center mt-[200px] max-sm:mt-[50px] flex w-full">
+      <div className="items-center max-sm:h-max justify-center mt-[200px] max-sm:mt-[60px] flex w-full">
         <section className="w-[75%] max-sm:w-full  max-sm:h-max  flex flex-col md:flex-row items-center justify-center max-sm:gap-[20px] gap-[100px]">
 
           <div className="flex max-sm:order-2 flex-col w-[655px] max-sm:w-[335px] text-center   max-sm:items-center md:text-left">
