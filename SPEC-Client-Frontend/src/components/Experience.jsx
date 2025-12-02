@@ -31,20 +31,20 @@ export default function Experience() {
                   text-white font-semibold
                   px-6 h-[50px] rounded-full
                   flex items-center gap-3
-                 max-sm:w-[300px]
-                  max-sm:text-[15px] max-sm:h-[35px]
+                 max-sm:w-[300px] 
+                  max-sm:text-[15px] max-sm:h-[40px]
   max-sm:justify-center  max-sm:font-bold
                 "
               >
                 DOWNLOAD CATALOGUE
-                <img src={arrowRight} alt="" className="max-sm:h-[17px] w-[17px]"/>
+                <img src={arrowRight} alt="" className="max-sm: w-[17px]"/>
 
               </button>
 
               <button
                 className="
                   bg-white border 
-                  text-[var(--brown)] font-semibold
+                  text-[var(--brown)] font-semibold 
                   px-6 py-3 rounded-full
                   flex items-center gap-3
                     max-sm:w-[300px]
@@ -55,7 +55,7 @@ export default function Experience() {
                 "
               >
                 VIEW PRODUCTS
-                <img src={arrowRight2} alt=""  className="max-sm:h-[17px] w-[17px]"/>
+                <img src={arrowRight2} alt=""  className="max-sm: w-[17px]"/>
               </button>
             </div>
           </div>

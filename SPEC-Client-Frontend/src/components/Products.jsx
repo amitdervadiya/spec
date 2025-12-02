@@ -22,8 +22,8 @@ export default function Products() {
                 Discover premium-quality bathroom accessories crafted for style, strength, and daily comfort. From modern designs to durable finishes — we deliver excellence in every detail.
               </p>
 
-              <button className=" gap-2 bg-[var(--brown)] mt-[45px] max-sm:mt-[20px] max-sm:mb-[30px] order-2  text-white font-semibold text-[17px] h-[50px] px-5 w-[235px] flex justify-center items-center rounded-full transition-all duration-300 shadow-lg tracking-wide">
-                View Products <img src={arrowright} alt="" className='h-5 w-5' />  </button>
+              <button className=" gap-2 bg-[var(--brown)] mt-[45px] max-sm:mt-[20px] max-sm:mb-[30px] order-2  max-sm:h-[40px] text-white font-semibold text-[17px] h-[50px] px-5 w-[235px] flex justify-center items-center rounded-full transition-all duration-300 shadow-lg tracking-wide">
+                View Products <img src={arrowright} alt="" className=' w-5 max-sm:w-[17px] ' />  </button>
             </div>
           </div>
 
