@@ -6,7 +6,7 @@ import herobg from "../assets/images/Mask group.png";
 
 import rightarrow from "../assets/images/arrowblue.svg"
 import arrowleft from "../assets/images/leftarrow.svg";
-
+import arrowr from "../assets/images/arright.svg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -69,18 +69,9 @@ export default function Hero() {
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
                                     ></h4>
 
-                                    <button className="mt-[25px] flex gap-1 justify-center items-center text-[17px] bg-[var(--brown)] text-white font-bold h-[50px] max-sm:h-[35px] max-sm:px-[18px] px-[25px] rounded-full tracking-wide">
+                                    <button className="mt-[25px] flex max-sm:text-[15px] gap-1 justify-center items-center text-[17px] bg-[var(--brown)] text-white font-bold h-[50px] max-sm:h-[40px] max-sm:px-[18px] px-[25px] rounded-full tracking-wide">
                                         GET FOUND{" "}
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                            <path
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M5 12h14m-6 6l6-6m-6-6l6 6"
-                                            />
-                                        </svg>
+                                     <img src={arrowr} alt="" className="w-5 max-sm:w-[17px]" />
                                     </button>
                                 </div>
                             </div>

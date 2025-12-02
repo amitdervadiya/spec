@@ -253,7 +253,7 @@ export default function FooterSection() {
             </div>
 
             <button className=" bg-[var(--brown)] px-6 py-2  max-sm:h-[40px] max-sm:text-[15px] max-sm:font-bold max-sm:text-center justify-center max-sm:w-full rounded-full  text-white mt-[35px] gap-2 flex font-semibold">
-              SUBMIT NOW <img src={rightarrow} alt="" />
+              SUBMIT NOW <img src={rightarrow} alt="" className="max-sm:w-[17px] max-sm:h-[17px]"/>
             </button>
           </div>
 

@@ -22,12 +22,12 @@ export default function AccessoriesSection() {
     originalSlides[0],
   ];
 
-  // Determine visible slides based on viewport
+
   const getVisibleSlides = () => {
     const width = window.innerWidth;
-    if (width >= 1024) return 3; // Desktop
-    if (width >= 640) return 2;  // Laptop / Tablet
-    return 2;                    // Mobile
+    if (width >= 1024) return 3; 
+    if (width >= 640) return 2;  
+    return 2;                
   };
 
   const [visibleSlides, setVisibleSlides] = useState(getVisibleSlides());

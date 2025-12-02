@@ -2,8 +2,8 @@ import { useState, useEffect, } from "react";
 import maplogo from "../assets/images/Flag_of_the_United_States 1.svg";
 import logo from "../assets/images/logospec.svg";
 import navlogo from "../assets/images/navlogo.svg";
-import h1 from "../assets/images/headset.png";
-import h2 from "../assets/images/whatsapp.png";
+import h1 from "../assets/images/Headset(1).svg"
+import h2 from "../assets/images/WhatsappLogo.svg";
 import s12 from "../assets/images/Heart.svg";
 import user from "../assets/images/User.svg";
 import search1 from "../assets/images/MagnifyingGlass.svg";
@@ -124,7 +124,6 @@ export default function NavbarHero() {
             <img src={logo} alt="logo" className="w-[165px] h-[47px] max-sm:h-[25px] max-sm:w-[88px]" />
           </div>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden md:block relative">
             <ul className="flex items-center gap-[60px] max-xl:gap-[30px] max-lg:gap-[20px] 
                      text-[17px] max-lg:text-[15px] uppercase tracking-wide text-white font-semibold">
@@ -228,12 +227,12 @@ export default function NavbarHero() {
           <div>
             <div className="flex justify-between flex-col px-[20px]">
               <div className="flex justify-between items-end">
-                <p className="text-[14px] font-medium flex items-center gap-2">
-                  <img src={h1} alt="" className="w-4 h-4" /> +91 98791 66592
-                </p>
-                <p className="text-[14px] font-medium flex items-center gap-2">
+           <a href="tel:+919879166592">  <p className="text-[14px] font-medium flex items-center gap-2">
+              <img src={h1} alt="" className="w-4 h-4" /> +91 98791 66592
+                </p></a>   
+             <a href="tel: +919016699400">   <p className="text-[14px] font-medium flex items-center gap-2">
                   <img src={h2} alt="" className="w-4 h-4" /> +91 90166 99400
-                </p>
+                </p></a>
               </div>
 
               <button className="mt-6 w-full flex justify-center text-[15px] gap-[7px] items-center bg-[var(--brown)] text-white h-[35px] rounded-full font-bold">
