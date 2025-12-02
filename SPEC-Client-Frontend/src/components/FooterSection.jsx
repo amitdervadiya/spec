@@ -1,4 +1,4 @@
-import  { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import phone from "../assets/images/Phone.svg"
 import location from "../assets/images/MapPin.svg"
 import rightarrow from "../assets/images/ArrowRight(1).svg"
@@ -25,7 +25,7 @@ export default function FooterSection() {
     const toggle = (menu) => {
       setOpenMenu(openMenu === menu ? null : menu);
     };
-    
+
 
     return (
       <div className="w-full sm:hidden flex flex-col gap-4">
@@ -100,7 +100,7 @@ export default function FooterSection() {
           {openMenu === "contact" && (
             <div className="mt-2 flex flex-col gap-4 text-[16px] text-[var(--grey-text)]">
               <div className="flex gap-2 items-center">
-                <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt=""  className="w-5 h-5"/> +91 98791 66592</a>
+                <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt="" className="w-5 h-5" /> +91 98791 66592</a>
 
               </div>
               <div className="flex gap-2 items-start">
@@ -164,7 +164,7 @@ export default function FooterSection() {
 
 
   const [mapUrl, setMapUrl] = useState(locations.rajkot);
-    const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   // Show button when scrolled 300px from top
   useEffect(() => {
@@ -257,15 +257,8 @@ export default function FooterSection() {
       </div>
 
 
-      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center relative  max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
-     {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="absolute right-6 bottom-6 z-50 bg-white p-3 rounded-full shadow-lg hover:scale-110 transition-all"
-        >
-          <img src={up} alt="Go to Top" className="w-5 h-5 invert" />
-        </button>
-      )}
+      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center   max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
+
 
         <div className="mt-[190px] max-sm:gap-[35px] max-xl:gap-[50px] max-2xl:gap-[50px] flex max-lg:flex-col gap-[200px] max-[1700px]:gap-[100px] max-sm:flex-col  w-[85%]">
 
@@ -281,7 +274,7 @@ export default function FooterSection() {
             </div>
 
             <button className=" bg-[var(--brown)] px-6 py-2  max-sm:h-[40px] max-sm:text-[15px] max-sm:font-bold max-sm:text-center justify-center max-sm:w-full rounded-full  text-white mt-[35px] gap-2 flex font-semibold">
-              SUBMIT NOW <img src={rightarrow} alt="" className="max-sm:w-[17px] max-sm:h-[17px]"/>
+              SUBMIT NOW <img src={rightarrow} alt="" className="max-sm:w-[17px] max-sm:h-[17px]" />
             </button>
           </div>
 
@@ -362,7 +355,7 @@ export default function FooterSection() {
 
         </div>
 
-        <div className="mt-[80px] w-[85%] max-sm:mt-[30px]  py-[30px] border  border-t-white border-opacity-[20%] border-l-0 border-r-0  border-b-0  flex flex-col md:flex-row items-center justify-between text-sm text-[var(--grey-text)]">
+        <div className="mt-[80px] w-[85%] max-sm:mt-[30px] relative  py-[30px] border  border-t-white border-opacity-[20%] border-l-0 border-r-0  border-b-0  flex flex-col md:flex-row items-center justify-between text-sm text-[var(--grey-text)]">
 
           <div className="flex gap-6 max-sm:hidden items-center w-full   max-sm:flex-col max-sm:gap-2 text-[17px] justify-center mt-3 md:mt-0">
             <p>© 2025 <span className="font-semibold text-white">SPEC.</span> All Rights Reserved.</p>
@@ -379,9 +372,14 @@ export default function FooterSection() {
               <div className="h-[21px] w-[1px] text-[14px] bg-[#7F8684] "></div>
               <p>Diversity Policy</p>
             </div>
-      
+            {isVisible && (
+              <button
+                onClick={scrollToTop}
+                className="absolute right-0 bottom-4 z-50 bg-white p-3 rounded-full shadow-lg hover:scale-110 transition-all">
+                <img src={up} alt="Go to Top" className="w-5 h-5 invert" />
+              </button>
+            )}
           </div>
-
         </div>
       </footer>
     </section>

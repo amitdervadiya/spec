@@ -36,7 +36,7 @@ export default function About() {
 
                     <button
                       onClick={() => setShowVideo(false)}
-                      className="absolute top-2 right-2 text-white text-2xl font-bold">
+                      className="absolute top-2 right-6 bg-black p-2 rounded-full text-white text-2xl font-bold">
                       ✕
                     </button>
 
