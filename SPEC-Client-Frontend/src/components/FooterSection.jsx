@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState ,useEffect} from "react";
 import phone from "../assets/images/Phone.svg"
 import location from "../assets/images/MapPin.svg"
 import rightarrow from "../assets/images/ArrowRight(1).svg"
@@ -25,6 +25,7 @@ export default function FooterSection() {
     const toggle = (menu) => {
       setOpenMenu(openMenu === menu ? null : menu);
     };
+    
 
     return (
       <div className="w-full sm:hidden flex flex-col gap-4">
@@ -163,6 +164,25 @@ export default function FooterSection() {
 
 
   const [mapUrl, setMapUrl] = useState(locations.rajkot);
+    const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when scrolled 300px from top
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <section className="w-full mt-[140px] max-sm:mt-[50px]">
@@ -237,7 +257,15 @@ export default function FooterSection() {
       </div>
 
 
-      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center  max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
+      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center relative  max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
+     {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="absolute right-6 bottom-6 z-50 bg-white p-3 rounded-full shadow-lg hover:scale-110 transition-all"
+        >
+          <img src={up} alt="Go to Top" className="w-5 h-5 invert" />
+        </button>
+      )}
 
         <div className="mt-[190px] max-sm:gap-[35px] max-xl:gap-[50px] max-2xl:gap-[50px] flex max-lg:flex-col gap-[200px] max-[1700px]:gap-[100px] max-sm:flex-col  w-[85%]">
 
@@ -332,7 +360,6 @@ export default function FooterSection() {
           </div>
 
 
-
         </div>
 
         <div className="mt-[80px] w-[85%] max-sm:mt-[30px]  py-[30px] border  border-t-white border-opacity-[20%] border-l-0 border-r-0  border-b-0  flex flex-col md:flex-row items-center justify-between text-sm text-[var(--grey-text)]">
@@ -352,7 +379,7 @@ export default function FooterSection() {
               <div className="h-[21px] w-[1px] text-[14px] bg-[#7F8684] "></div>
               <p>Diversity Policy</p>
             </div>
-
+      
           </div>
 
         </div>
