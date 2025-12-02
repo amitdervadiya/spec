@@ -4,6 +4,7 @@ import img2 from "../assets/images/image2.png"
 import circle from "../assets/images/CheckCircle.png"
 import play from "../assets/images/play.svg"
 import arrowr from "../assets/images/arright.svg"
+import video from "../assets/images/video.mp4"
 
 
 
@@ -41,8 +42,9 @@ export default function About() {
                     </button>
 
                     <iframe
-                      src="https://www.pexels.com/video/th-interior-design-of-a-home-bathroom-5644285/?autoplay=1"
+                      src={video}
                       title="Bathroom Video"
+                      
                       className="w-full h-[400px] max-sm:h-[250px]"
                       allow="autoplay; fullscreen"
                       allowFullScreen
