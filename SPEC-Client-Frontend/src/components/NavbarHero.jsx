@@ -118,7 +118,7 @@ export default function NavbarHero() {
         </div>
       </div>
 
-      <header className="w-full bg-[var(--black)] flex justify-center items-center h-[77px] z-50 max-sm:h-[50px]">
+      <header className="w-full bg-[var(--black)] flex justify-center items-center h-[77px] z-50 max-sm:h-[50px]" id="header">
         <div className="flex justify-between items-center w-[85%]">
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" className="w-[165px] h-[47px] max-sm:h-[25px] max-sm:w-[88px]" />
