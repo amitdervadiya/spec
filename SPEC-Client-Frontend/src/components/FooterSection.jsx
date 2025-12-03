@@ -319,10 +319,10 @@ export default function FooterSection() {
                     <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt="" className="w-5 h-5" /> +91 98791 66592</a>
                   </div>
                   <div className="flex gap-[10px]  items-start ">
-                    <img src={fmap} alt="" className="mt-[3px]" /> Kotarda, Rajkot, Gujarat 360022
+                    <img src={fmap} alt="" className="mt-[3px] w-5 h-5" /> Kotarda, Rajkot, Gujarat 360022
                   </div>
                   <div className="flex gap-[10px] items-center text-[#00A198]">
-                    <img src={ef} alt="" /> spec@infospecco.in
+                    <img src={ef} alt="" className="mt-[3px] w-5 h-5" /> spec@infospecco.in
                   </div>
                 </div>
 

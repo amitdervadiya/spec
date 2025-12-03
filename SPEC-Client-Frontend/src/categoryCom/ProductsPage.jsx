@@ -7,19 +7,19 @@ import filter from "../assets/images/filter.svg"
 
 export default function ProductsPage() {
   const products = [
-    { id: 1, name: "Towel Rack - Black Matt", code: "2001", rating: 5, price: 850, steelType: " 202", color: "Black Matt", shape: "Square", image: productImg },
-    { id: 2, name: "Towel Rack - Chrome", code: "2002", rating: 4, price: 750, steelType: " 304", color: "Chrome", shape: "Round", image: productImg },
-    { id: 3, name: "Double Shelf Rack - Gold", code: "2010", rating: 5, price: 1950, steelType: " 304", color: "Gold", shape: "Square", image: productImg },
-    { id: 4, name: "Dispenser Holder - Black Matt", code: "2015", rating: 3, price: 650, steelType: " 202", color: "Black Matt", shape: "Round", image: productImg },
-    { id: 5, name: "Shower Shelf - Rose Gold", code: "2023", rating: 5, price: 2250, steelType: " 304", color: "Rose Gold", shape: "Square", image: productImg },
-    { id: 6, name: "Paper Holder - Chrome", code: "2030", rating: 4, price: 590, steelType: " 202", color: "Chrome", shape: "Round", image: productImg },
-    { id: 7, name: "Corner Shelf - Gold", code: "2041", rating: 5, price: 1350, steelType: " 304", color: "Gold", shape: "Round", image: productImg },
-    { id: 8, name: "Tissue Holder - Black Matt", code: "2055", rating: 4, price: 499, steelType: " 202", color: "Black Matt", shape: "Square", image: productImg },
-    { id: 9, name: "Wall Shelf - Chrome", code: "2082", rating: 5, price: 1650, steelType: " 304", color: "Chrome", shape: "Square", image: productImg },
+    { id: 1, name: "Towel Rack - Black Matt", code: "2001", rating: 5, price: 850, steelType: "202", color: "Black Matt", shape: "Square", image: productImg },
+    { id: 2, name: "Towel Rack - Chrome", code: "2002", rating: 4, price: 750, steelType: "304", color: "Chrome", shape: "Round", image: productImg },
+    { id: 3, name: "Double Shelf Rack - Gold", code: "2010", rating: 5, price: 1950, steelType: "304", color: "Gold", shape: "Square", image: productImg },
+    { id: 4, name: "Dispenser Holder - Black Matt", code: "2015", rating: 3, price: 650, steelType: "202", color: "Black Matt", shape: "Round", image: productImg },
+    { id: 5, name: "Shower Shelf - Rose Gold", code: "2023", rating: 5, price: 2250, steelType: "304", color: "Rose Gold", shape: "Square", image: productImg },
+    { id: 6, name: "Paper Holder - Chrome", code: "2030", rating: 4, price: 590, steelType: "202", color: "Chrome", shape: "Round", image: productImg },
+    { id: 7, name: "Corner Shelf - Gold", code: "2041", rating: 5, price: 1350, steelType: "304", color: "Gold", shape: "Round", image: productImg },
+    { id: 8, name: "Tissue Holder - Black Matt", code: "2055", rating: 4, price: 499, steelType: "202", color: "Black Matt", shape: "Square", image: productImg },
+    { id: 9, name: "Wall Shelf - Chrome", code: "2082", rating: 5, price: 1650, steelType: "304", color: "Chrome", shape: "Square", image: productImg },
   ];
 
   const filters = [
-    { label: "Steel Types", key: "steelType", list: ["SS - 202", "SS - 304"] },
+    { label: "Steel Types", key: "steelType", list: ["202", "304"] },
     { label: "Colour", key: "color", list: ["Black Matt", "Chrome", "Gold", "Rose Gold"] },
     { label: "Shape", key: "shape", list: ["Round", "Square"] },
   ];

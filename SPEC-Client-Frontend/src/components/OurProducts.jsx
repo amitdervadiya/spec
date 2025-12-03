@@ -20,7 +20,7 @@ export default function OurProducts() {
     dotMobile: { top: "48%", left: "41%" },
     dotTablet: { top: "48%", left: "50%" },
     dotLaptop: { top: "50%", left: "57%" },
-    dotDesktop: { top: "50%", left: "55%" },
+    dotDesktop: { top: "50%", left: "43%" },
     dotPc: { top: "50%", left: "55%" },
     dotUltra: { top: "50%", left: "44%" },
   },
@@ -30,7 +30,7 @@ export default function OurProducts() {
     dotMobile: { top: "50%", left: "63%" },
     dotTablet: { top: "56%", left: "73%" },
     dotLaptop: { top: "53%", left: "77%" },
-    dotDesktop: { top: "52%", left: "68%" },
+    dotDesktop: { top: "52%", left: "63%" },
     dotPc: { top: "52%", left: "68%" },
     dotUltra: { top: "52%", left: "60%" }, // NEW
   },
@@ -40,7 +40,7 @@ export default function OurProducts() {
     dotMobile: { top: "11%", left: "73%" },
     dotTablet: { top: "9%", left: "82%" },
     dotLaptop: { top: "10%", left: "85%" },
-    dotDesktop: { top: "12%", left: "76%" },
+    dotDesktop: { top: "10%", left: "70%" },
     dotPc: { top: "12%", left: "76%" },
     dotUltra: { top: "10%", left: "67%" }, // NEW
   },
@@ -50,7 +50,7 @@ export default function OurProducts() {
     dotMobile: { top: "17%", left: "83%" },
     dotTablet: { top: "20%", left: "48%" },
     dotLaptop: { top: "19%", left: "94%" },
-    dotDesktop: { top: "17%", left: "85%" },
+    dotDesktop: { top: "15%", left: "79%" },
     dotPc: { top: "17%", left: "85%" },
     dotUltra: { top: "15%", left: "74%" }, // NEW
   },
@@ -60,7 +60,7 @@ export default function OurProducts() {
     dotMobile: { top: "60%", left: "40%" },
     dotTablet: { top: "60%", left: "50%" },
     dotLaptop: { top: "62%", left: "53%" },
-    dotDesktop: { top: "65%", left: "54%" },
+    dotDesktop: { top: "63%", left: "43%" },
     dotPc: { top: "65%", left: "54%" },
     dotUltra: { top: "62%", left: "44%" }, // NEW
   },
@@ -70,7 +70,7 @@ export default function OurProducts() {
     dotMobile: { top: "65%", left: "32%" },
     dotTablet: { top: "28%", left: "92%" },
     dotLaptop: { top: "64%", left: "45%" },
-    dotDesktop: { top: "30%", left: "74%" },
+    dotDesktop: { top: "70%", left: "34%" },
     dotPc: { top: "30%", left: "74%" },
     dotUltra: { top: "65%", left: "36%" }, // NEW
   },
@@ -80,7 +80,7 @@ export default function OurProducts() {
     dotMobile: { top: "92%", left: "86%" },
     dotTablet: { top: "91%", left: "94%" },
     dotLaptop: { top: "93%", left: "91%" },
-    dotDesktop: { top: "93%", left: "87%" },
+    dotDesktop: { top: "95%", left: "82%" },
     dotPc: { top: "93%", left: "87%" },
     dotUltra: { top: "94%", left: "76%" }, // NEW
   },
