@@ -5,8 +5,8 @@ export default function Qna() {
     return (
 
         <>
-            <div className='h-[250px] flex justify-center w-full'>
-                <div className='w-[85%] bg-[var(--brown)]  max-sm:gap-[20px] max-sm:flex-col max-sm:h-max flex justify-between max-sm:px-3 max-sm:py-5 px-[50px] items-center'>
+            <div className='h-[250px] mt-[150px] flex justify-center w-full'>
+                <div className='w-[85%] bg-[var(--brown)]   max-sm:gap-[20px] max-sm:flex-col max-sm:h-max flex justify-between max-sm:px-3 max-sm:py-5 px-[50px] items-center'>
                     <div className=' max-sm:px-2 gap-4 flex flex-col'>
                         <h2 className='text-[40px] max-sm:text-[28px]  font-semibold text-white'>Need help in buying?</h2>
                         <p className='text-[16px] max-sm:text-[12px]  font-medium text-white'>Available Monday to Saturday: 9:30 am to 5:30 pm</p>

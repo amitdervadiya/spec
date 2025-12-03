@@ -15,7 +15,7 @@ export default function About() {
     <>
       <div className="w-full max-sm:h-max max-sm:mt-[50px]  justify-center flex mt-[140px] items-center relative">
 
-        <div className="h-[379px] w-[25%] max-md:hidden absolute -bottom-14 left-0 z-0  max-sm:w-[200px] max-sm:h-[200px] bg-[#FFF8EE]">
+        <div className="h-[379px] w-[20%] max-md:hidden absolute -bottom-14 left-0 z-0  max-sm:w-[200px] max-sm:h-[200px] bg-[#FFF8EE]">
 
         </div>
         <section className="w-[85%] bg-[#FFFDFA] justify-between max-md:justify-center flex flex-col lg:flex-row  gap-[90px] max-sm:gap-[30px]  max-sm:justify-center">
