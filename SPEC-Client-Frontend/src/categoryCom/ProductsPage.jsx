@@ -66,7 +66,7 @@ export default function ProductsPage() {
   });
 
   return (
-    <div className="w-[85%] mx-auto flex gap-10 py-10 max-lg:flex-col">
+    <div className="w-[85%] mx-auto flex gap-10   mt-[130px]  max-lg:flex-col">
 
 
       <div className="w-[285px]  h-max max-lg:w-full ">
@@ -138,15 +138,15 @@ export default function ProductsPage() {
             </button>
 
             {sortOpen && (
-              <ul className="absolute right-0 mt-1 bg-white  text-[var(--black)] cursor-pointer">
+              <ul className="absolute w-max right-0 mt-1 bg-white  text-[var(--black)] cursor-pointer">
                 <li
-                  className="px-3 py-1 text-xs hover:bg-[#F6EFE3]"
+                  className="px-3 border-b   py-3 text-xs hover:bg-[#F6EFE3]"
                   onClick={() => { setSortType("low-high"); setSortOpen(false); }}
                 >
                   Price Low to High
                 </li>
                 <li
-                  className="px-3 py-1 text-xs hover:bg-[#F6EFE3]"
+                  className="px-3 py-3 text-xs hover:bg-[#F6EFE3]"
                   onClick={() => { setSortType("high-low"); setSortOpen(false); }}
                 >
                   Price High to Low
@@ -156,26 +156,26 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 mt-[30px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="grid grid-cols-3 mt-[30px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
           {sortedProducts.map((p, idx) => (
             <div key={idx} className="bg-white slide-ac h-max  transition-all duration-300 border group">
-              <img src={p.image} className="h-[350px] w-full" />
-              <div className=" p-4 gap-5  view-bg flex flex-col ">
-                <div className="flex items-center justify-between  mb-1">
+              <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
+              <div className=" p-4 gap-5 h-max max-sm:gap-[10px] max-sm:px-[10px] max-sm:py-[15px] view-bg flex flex-col ">
+                <div className="flex items-center justify-between  ">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
-                      <img key={sIdx} src={star} className="w-5 star" />
+                      <img key={sIdx} src={star} className="w-5 max-sm:w-[12px] star" />
                     ))}
                   </div>
 
-                  <p className="text-[var(--grey-text)] font-semibold text-[18px] h-white"> ss : <span className="text-[var(--black)] h-white">{p.steelType}</span></p>
+                  <p className="text-[var(--grey-text)] font-semibold text-[18px] h-white max-sm:text-[13px]"> ss : <span className="text-[var(--black)] h-white">{p.steelType}</span></p>
                 </div>
         <div>
-                  <h2 className="text-[var(--black)] text-[22px] font-bold max-2xl:text-[20px] h-white">{p.name}</h2>
-                <p className="font-semibold text-[17px] text-[var(--grey-text)] h-white">code : <span className="text-[var(--black)] h-white">{p.code}</span></p>
+                  <h2 className="text-[var(--black)] text-[22px] font-bold max-2xl:text-[20px] max-sm:text-[15px] h-white">{p.name}</h2>
+                <p className="font-semibold text-[17px] text-[var(--grey-text)] h-white max-sm:hidden">code : <span className="text-[var(--black)] h-white">{p.code}</span></p>
 
         </div>
-                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[15px] font-bold flex items-center gap-1">
+                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[15px] x font-bold flex items-center gap-1">
                   VIEW ALL <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6" /></svg>
                 </a>
               </div>
