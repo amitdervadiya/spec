@@ -25,7 +25,7 @@ import ca9 from "../assets/images/ca9.png";
 import ca10 from "../assets/images/ca10.png";
 import ca11 from "../assets/images/ca11.png";
 import ca12 from "../assets/images/ca12.png";
-
+import dot from "../assets/images/nav-dot.svg";
 
 const categories = [
   { name: "Showers", img: sh, bg: ca1 },
@@ -145,6 +145,23 @@ export default function Categories() {
             ))}
           </div>
         </div>
+        {/* Mobile Navigation Dots */}
+<div className="sm:hidden flex justify-center gap-2 mt-4">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setSlide(index)}
+      className="flex items-center justify-center"
+    >
+      {slide === index ? (
+        <img src={dot} alt="active" className="w-[15px] h-[15px]" />
+      ) : (
+        <div className="w-[9px] h-[9px] rounded-full bg-[#EAEAEA]"></div>
+      )}
+    </button>
+  ))}
+</div>
+
 
       </div>
     </section>
