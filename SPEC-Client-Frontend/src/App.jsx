@@ -1,5 +1,5 @@
  import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./routes/Homepage";
+import Homepage from "./routes/Homepage"
 import Category from "./routes/category";
 
 
@@ -12,8 +12,8 @@ export default function App() {
    <>
    <BrowserRouter>
    <Routes>
-    <Route path="/" element={Homepage}></Route>
-    <Route path="/categories" element={Category}></Route>
+    <Route path="/" Component={Homepage}></Route>
+    <Route path="/categories" Component={Category}></Route>
    </Routes>
    </BrowserRouter>
    </>

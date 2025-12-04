@@ -10,6 +10,8 @@ import Accordion from '../components/Accordion';
 import AccessoriesSection from "../components/AccessoriesSection"
 import Experience from "../components/Experience"
 import Hero from '../components/Hero';
+
+
 export default function Homepage() {
   return (
     <>
