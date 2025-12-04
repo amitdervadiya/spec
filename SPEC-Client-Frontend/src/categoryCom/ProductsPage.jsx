@@ -4,6 +4,7 @@ import star from "../assets/images/catstar.svg";
 import productImg from "../assets/images/image3.png";
 import download from "../assets/images/DownloadSimple.svg";
 import filter from "../assets/images/filter.svg";
+import right from "../assets/images/brownright.svg"
 
 export default function ProductsPage() {
   const products = [
@@ -65,7 +66,9 @@ export default function ProductsPage() {
   });
 
   return (
-    <div className="w-[85%] mx-auto flex gap-10 mt-[130px] relative max-lg:flex-col">
+    <>
+   <div className="flex justify-center items-center w-full">
+    <div className="w-[85%]  flex gap-10 mt-[130px] relative max-lg:flex-col">
 
       {/* FILTER SIDEBAR - DESKTOP */}
       <div className="w-[285px] max-lg:hidden h-max ">
@@ -130,7 +133,14 @@ export default function ProductsPage() {
 
 
         <div className="flex justify-between mb-4">
-          <p className="text-[20px] font-bold text-[var(--black)]">Filter</p>
+           <div
+          className=" flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px]  justify-center items-center cursor-pointer"
+          onClick={() => setMobileFilterOpen(true)}
+        >
+          <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">
+            <img src={filter} alt="" className="w-5" /> FILTER
+          </p>
+        </div>
           <button onClick={() => setMobileFilterOpen(false)} className="text-xl text-[var(--brown)] font-bold">✕</button>
         </div>
 
@@ -213,38 +223,33 @@ export default function ProductsPage() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-3 mt-[15px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
+        <div className="grid grid-cols-3 max-2xl:grid-cols-2  mt-[15px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
           {sortedProducts.map((p, idx) => (
-            <div key={idx} className="bg-white slide-ac h-max border group">
+            <div key={idx} className="bg-white slide-ac  border group">
               <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
-              <div className="p-4 gap-5 view-bg flex flex-col">
+              <div className="p-4 gap-5  view-bg flex flex-col">
                 <div className="flex items-center justify-between">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
-                      <img key={sIdx} src={star} className="w-5 max-sm:w-[12px]" />
+                      <img key={sIdx} src={star} className="w-5 max-sm:w-[12px] star" />
                     ))}
                   </div>
 
-                  <p className="text-[var(--grey-text)] font-semibold text-[18px] max-sm:text-[13px]">
-                    ss : <span className="text-[var(--black)]">{p.steelType}</span>
+                  <p className="text-[var(--grey-text)] font-semibold text-[18px] max-sm:text-[13px] h-white">
+                    ss : <span className="text-[var(--black)] h-white">{p.steelType}</span>
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-[var(--black)] text-[22px] font-bold max-sm:text-[15px]">
+                  <h2 className="text-[var(--black)] 2xl:text-[22px] text-[18px] font-bold max-sm:text-[15px] h-white">
                     {p.name}
                   </h2>
-                  <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden">
-                    code : <span className="text-[var(--black)]">{p.code}</span>
+                  <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden h-white">
+                    code : <span className="text-[var(--black)] h-white">{p.code}</span>
                   </p>
                 </div>
-                <a href="#" className="text-[var(--brown)] ac-button text-[18px] max-sm:text-[15px] font-bold flex items-center gap-1">
+                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[15px]  font-bold flex items-center gap-1">
                   VIEW ALL
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 24 24">
-                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-width="2"
-                      d="M5 12h14m-6 6l6-6m-6-6l6 6" />
-                  </svg>
+              <img src={right} alt=""  className="star"/>
                 </a>
               </div>
             </div>
@@ -253,5 +258,7 @@ export default function ProductsPage() {
 
       </div>
     </div>
+    </div>
+     </>
   );
 }
