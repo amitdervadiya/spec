@@ -223,7 +223,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-3 max-2xl:grid-cols-2  mt-[15px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
+        <div className="grid grid-cols-3 max-2xl:grid-cols-3  mt-[15px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
           {sortedProducts.map((p, idx) => (
             <div key={idx} className="bg-white slide-ac  border group">
               <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
