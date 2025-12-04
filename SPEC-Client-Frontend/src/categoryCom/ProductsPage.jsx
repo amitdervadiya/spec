@@ -2,8 +2,8 @@ import { useState } from "react";
 import down from "../assets/images/down.svg";
 import star from "../assets/images/catstar.svg";
 import productImg from "../assets/images/image3.png";
-import download from "../assets/images/DownloadSimple.svg"
-import filter from "../assets/images/filter.svg"
+import download from "../assets/images/DownloadSimple.svg";
+import filter from "../assets/images/filter.svg";
 
 export default function ProductsPage() {
   const products = [
@@ -26,6 +26,8 @@ export default function ProductsPage() {
 
   const [openFilter, setOpenFilter] = useState(null);
   const [sortOpen, setSortOpen] = useState(false);
+  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
   const [selectedFilters, setSelectedFilters] = useState({
     steelType: [],
     color: [],
@@ -41,16 +43,14 @@ export default function ProductsPage() {
   const handleCheckbox = (filterKey, value) => {
     setSelectedFilters((prev) => {
       const existing = prev[filterKey];
-      const updated =
-        existing.includes(value)
-          ? existing.filter((v) => v !== value)
-          : [...existing, value];
+      const updated = existing.includes(value)
+        ? existing.filter((v) => v !== value)
+        : [...existing, value];
 
       return { ...prev, [filterKey]: updated };
     });
   };
 
-  /** FILTER PRODUCTS */
   const filteredProducts = products.filter((item) => {
     return Object.keys(selectedFilters).every((key) => {
       if (selectedFilters[key].length === 0) return true;
@@ -58,7 +58,6 @@ export default function ProductsPage() {
     });
   });
 
-  /** SORT PRODUCTS */
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortType === "low-high") return a.price - b.price;
     if (sortType === "high-low") return b.price - a.price;
@@ -66,89 +65,146 @@ export default function ProductsPage() {
   });
 
   return (
-    <div className="w-[85%] mx-auto flex gap-10   mt-[130px]  max-lg:flex-col">
+    <div className="w-[85%] mx-auto flex gap-10 mt-[130px] relative max-lg:flex-col">
 
-
-      <div className="w-[285px]  h-max max-lg:w-full ">
+      {/* FILTER SIDEBAR - DESKTOP */}
+      <div className="w-[285px] max-lg:hidden h-max ">
         <div className="px-5 rounded-full border border-[#2A2928] w-max flex border-opacity-[20%] h-[50px] mb-4 justify-center items-center">
-          <p className="text-[var(--brown)] flex gap-2 font-medium text-sm ">
+          <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">
             <img src={filter} alt="" className="w-5" /> FILTER
           </p>
         </div>
-        <div className=" bg-[#FFF8EE]">
 
-<div className="p-5">
-  
-          {filters.map((f, i) => (
-            <div key={i} className="mb-6 flex gap-[25px] flex-col pb-[15px] border-b border-[#110A00] border-opacity-[10%]">
-              <button
-                onClick={() => toggleFilter(i)}
-                className="flex justify-between w-full text-[18px] font-semibold text-[var(--black)] "
-              >
-                {f.label}
-                <img src={down} className={`w-5 transition-transform ${openFilter === i ? "rotate-180" : ""}`} />
-              </button>
+        <div className="bg-[#FFF8EE]">
+          <div className="p-5">
+            {filters.map((f, i) => (
+              <div key={i} className="mb-6 flex gap-[25px] flex-col pb-[15px] border-b border-[#110A00] border-opacity-[10%]">
+                <button
+                  onClick={() => toggleFilter(i)}
+                  className="flex justify-between w-full text-[18px] font-semibold text-[var(--black)]"
+                >
+                  {f.label}
+                  <img src={down} className={`w-5 transition-transform ${openFilter === i ? "rotate-180" : ""}`} />
+                </button>
 
-              {openFilter === i && (
-                <ul className=" gap-5 flex flex-col text-[18px]  text-[var(--black)]">
-                  {f.list.map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-5">
-                      <input
-                        type="checkbox"
-                        className="w-5 h-5 accent-[var(--brown)] cursor-pointer"
-                        checked={selectedFilters[f.key].includes(item)}
-                        onChange={() => handleCheckbox(f.key, item)}
-                      />
-                      <span className="cursor-pointer hover:text-[var(--brown)]">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-</div>
-
-
+                {openFilter === i && (
+                  <ul className="gap-5 flex flex-col text-[18px] text-[var(--black)]">
+                    {f.list.map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-5">
+                        <input
+                          type="checkbox"
+                          className="w-5 h-5 accent-[var(--brown)] cursor-pointer"
+                          checked={selectedFilters[f.key].includes(item)}
+                          onChange={() => handleCheckbox(f.key, item)}
+                        />
+                        <span className="cursor-pointer hover:text-[var(--brown)]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
 
           <div className="h-[302px]">
             <img src={productImg} alt="" className="object-cover h-[252px] w-full" />
-            <button className="flex items-center gap-2 text-white bg-[var(--brown)]  font-bold text-[16px] text-center justify-center h-[50px] w-full">
+            <button className="flex items-center gap-2 text-white bg-[var(--brown)] font-bold text-[16px] justify-center h-[50px] w-full">
               Brochure Download <img src={download} alt="" />
             </button>
           </div>
         </div>
       </div>
 
+      {/* FILTER SIDEBAR - MOBILE SLIDE PANEL */}
+      {mobileFilterOpen && (
+        <div
+        className="absolute inset-0 bg-black/30 z-40 lg:hidden"
+
+          onClick={() => setMobileFilterOpen(false)}
+        ></div>
+      )}
+
+    <div className={`absolute top-0 left-0 bg-white z-50 w-[75%] h-max rounded-r-2xl shadow-xl p-5 transition-all duration-500 sm:hidden
+  ${mobileFilterOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}`}
+>
+
+
+        <div className="flex justify-between mb-4">
+          <p className="text-[20px] font-bold text-[var(--black)]">Filter</p>
+          <button onClick={() => setMobileFilterOpen(false)} className="text-xl text-[var(--brown)] font-bold">✕</button>
+        </div>
+
+        {/* SAME FILTER UI */}
+        {filters.map((f, i) => (
+          <div key={i} className="mb-6 flex gap-[25px] flex-col pb-[15px] border-b border-[#110A00] border-opacity-[10%]">
+            <button
+              onClick={() => toggleFilter(i)}
+              className="flex justify-between w-full text-[18px] font-semibold text-[var(--black)]"
+            >
+              {f.label}
+              <img src={down} className={`w-5 transition-transform ${openFilter === i ? "rotate-180" : ""}`} />
+            </button>
+
+            {openFilter === i && (
+              <ul className="gap-5 flex flex-col text-[18px] text-[var(--black)]">
+                {f.list.map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-5">
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 accent-[var(--brown)] cursor-pointer"
+                      checked={selectedFilters[f.key].includes(item)}
+                      onChange={() => handleCheckbox(f.key, item)}
+                    />
+                    <span className="cursor-pointer hover:text-[var(--brown)]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+           <div className="h-[302px]">
+            <img src={productImg} alt="" className="object-cover h-[252px] w-full" />
+            <button className="flex items-center gap-2 text-white bg-[var(--brown)] font-bold text-[16px] justify-center h-[50px] w-full">
+              Brochure Download <img src={download} alt="" />
+            </button>
+          </div>
+      </div>
+
       {/* PRODUCT SECTION */}
       <div className="flex-1">
 
+        {/* Mobile FILTER button */}
+        <div
+          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mb-4 justify-center items-center cursor-pointer"
+          onClick={() => setMobileFilterOpen(true)}
+        >
+          <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">
+            <img src={filter} alt="" className="w-5" /> FILTER
+          </p>
+        </div>
+
         {/* Top bar */}
-        <div className="flex items-start justify-between mb-1">
+        <div className="flex items-center py-2 justify-between mb-1">
           <p className="text-[var(--black)] text-[18px] font-medium">
             {sortedProducts.length} products
           </p>
 
-          {/* SORT SELECT */}
           <div className="relative text-[var(--black)] text-[18px] font-medium">
             <button
-              className="flex gap-1 items-center  px-3 py-1 "
+              className="flex gap-1 items-center px-3 py-1"
               onClick={() => setSortOpen(!sortOpen)}
             >
               Sort By <img src={down} className={`w-5 ${sortOpen ? "rotate-180" : ""}`} />
             </button>
 
             {sortOpen && (
-              <ul className="absolute w-max right-0 mt-1 bg-white  text-[var(--black)] cursor-pointer">
-                <li
-                  className="px-3 border-b   py-3 text-xs hover:bg-[#F6EFE3]"
-                  onClick={() => { setSortType("low-high"); setSortOpen(false); }}
-                >
+              <ul className="absolute w-max right-0 mt-1 bg-white text-[var(--black)] cursor-pointer">
+                <li className="px-3 border-b py-3 text-xs hover:bg-[#F6EFE3]"
+                  onClick={() => { setSortType("low-high"); setSortOpen(false); }}>
                   Price Low to High
                 </li>
-                <li
-                  className="px-3 py-3 text-xs hover:bg-[#F6EFE3]"
-                  onClick={() => { setSortType("high-low"); setSortOpen(false); }}
-                >
+                <li className="px-3 py-3 text-xs hover:bg-[#F6EFE3]"
+                  onClick={() => { setSortType("high-low"); setSortOpen(false); }}>
                   Price High to Low
                 </li>
               </ul>
@@ -156,32 +212,45 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 mt-[30px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
+        {/* Products Grid */}
+        <div className="grid grid-cols-3 mt-[15px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
           {sortedProducts.map((p, idx) => (
-            <div key={idx} className="bg-white slide-ac h-max  transition-all duration-300 border group">
+            <div key={idx} className="bg-white slide-ac h-max border group">
               <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
-              <div className=" p-4 gap-5 h-max max-sm:gap-[10px] max-sm:px-[10px] max-sm:py-[15px] view-bg flex flex-col ">
-                <div className="flex items-center justify-between  ">
+              <div className="p-4 gap-5 view-bg flex flex-col">
+                <div className="flex items-center justify-between">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
-                      <img key={sIdx} src={star} className="w-5 max-sm:w-[12px] star" />
+                      <img key={sIdx} src={star} className="w-5 max-sm:w-[12px]" />
                     ))}
                   </div>
 
-                  <p className="text-[var(--grey-text)] font-semibold text-[18px] h-white max-sm:text-[13px]"> ss : <span className="text-[var(--black)] h-white">{p.steelType}</span></p>
+                  <p className="text-[var(--grey-text)] font-semibold text-[18px] max-sm:text-[13px]">
+                    ss : <span className="text-[var(--black)]">{p.steelType}</span>
+                  </p>
                 </div>
-        <div>
-                  <h2 className="text-[var(--black)] text-[22px] font-bold max-2xl:text-[20px] max-sm:text-[15px] h-white">{p.name}</h2>
-                <p className="font-semibold text-[17px] text-[var(--grey-text)] h-white max-sm:hidden">code : <span className="text-[var(--black)] h-white">{p.code}</span></p>
-
-        </div>
-                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[15px] x font-bold flex items-center gap-1">
-                  VIEW ALL <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6" /></svg>
+                <div>
+                  <h2 className="text-[var(--black)] text-[22px] font-bold max-sm:text-[15px]">
+                    {p.name}
+                  </h2>
+                  <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden">
+                    code : <span className="text-[var(--black)]">{p.code}</span>
+                  </p>
+                </div>
+                <a href="#" className="text-[var(--brown)] ac-button text-[18px] max-sm:text-[15px] font-bold flex items-center gap-1">
+                  VIEW ALL
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2"
+                      d="M5 12h14m-6 6l6-6m-6-6l6 6" />
+                  </svg>
                 </a>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
