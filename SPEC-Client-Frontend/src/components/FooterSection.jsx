@@ -14,6 +14,7 @@ import facebook from "../assets/images/facebookf.svg";
 import rec from "../assets/images/uprec.png"
 import up from "../assets/images/up.png";
 import down from "../assets/images/CaretDown.svg";
+import arrowup from "../assets/images/ArrowUp.svg"
 
 
 export default function FooterSection() {
@@ -375,8 +376,8 @@ export default function FooterSection() {
             {isVisible && (
               <button
                 onClick={scrollToTop}
-                className="absolute right-0 bottom-4 z-50 bg-white p-3 rounded-full shadow-lg hover:scale-110 transition-all">
-                <img src={up} alt="Go to Top" className="w-5 h-5 invert" />
+                className="absolute right-0 bottom-4 z-50 bg-white p-3 rounded-full  hover:scale-110 transition-all">
+                <img src={arrowup} alt="Go to Top" className="w-5 h-5 invert" />
               </button>
             )}
           </div>
