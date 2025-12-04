@@ -12,8 +12,8 @@ export default function App() {
    <>
    <BrowserRouter>
    <Routes>
-    <Route path="/" Component={Homepage}></Route>
-    <Route path="/categories" Component={Category}></Route>
+    <Route path="/" element={Homepage}></Route>
+    <Route path="/categories" element={Category}></Route>
    </Routes>
    </BrowserRouter>
    </>
