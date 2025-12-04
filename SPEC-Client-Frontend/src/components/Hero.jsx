@@ -1,5 +1,5 @@
 
-import {  useState } from "react";
+import { useState,useRef } from "react";
 import dot from "../assets/images/nav-dot.svg"
 import banner1 from "../assets/images/3.jpg";
 import herobg from "../assets/images/Mask group.png";
@@ -15,14 +15,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Hero() {
-    
+
     const [current, setCurrent] = useState(0);
+    const swiperRef = useRef(null); // ADD THIS
     const slides = [
         { id: 1, img: banner1, title: "FLOWS WITH <br> PERFECTION" },
         { id: 2, img: banner1, title: "ELEVATE YOUR <br> SPACE" },
         { id: 3, img: banner1, title: "MODERN. ELEGANT. <br> UNIQUE." },
     ];
- 
+
     return (
         <>
             <section className="relative h-[780px] max-sm:h-[700px] flex justify-center items-center overflow-hidden">
@@ -37,6 +38,8 @@ export default function Hero() {
                         nextEl: ".hero-next-btn",
                         prevEl: ".hero-prev-btn",
                     }}
+                 onSlideChange={(swiper) => setCurrent(swiper.realIndex)}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)} // ADD THIS
                     pagination={{
                         clickable: true,
                         el: ".hero-dots",
@@ -71,7 +74,7 @@ export default function Hero() {
 
                                     <button className="mt-[25px] flex max-sm:text-[15px] gap-1 justify-center items-center text-[17px] bg-[var(--brown)] text-white font-bold h-[50px] max-sm:h-[40px] max-sm:px-[18px] px-[25px] rounded-full tracking-wide">
                                         GET FOUND{" "}
-                                     <img src={arrowr} alt="" className="w-5 max-sm:w-[17px]" />
+                                        <img src={arrowr} alt="" className="w-5 max-sm:w-[17px]" />
                                     </button>
                                 </div>
                             </div>
@@ -89,17 +92,25 @@ export default function Hero() {
                     <img src={rightarrow} alt="next" />
                 </button>
 
-                <div className="sm:hidden flex justify-center mt-4 gap-2 absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
-                    {slides.map((_, i) => (
-                        <button key={i} onClick={() => setCurrent(i)}>
-                            {current === i ? (
-                                <img src={dot} className="w-[15px] h-[15px]" />
-                            ) : (
-                                <div className="w-[9px] h-[9px] rounded-full bg-[#CECECE]" />
-                            )}
-                        </button>
-                    ))}
-                </div>
+              <div className="sm:hidden flex justify-center mt-4 gap-2 absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
+  {slides.map((_, i) => (
+    <button
+      key={i}
+      onClick={() => {
+        setCurrent(i);
+        swiperRef.current?.slideToLoop(i);
+      }}
+      className="focus:outline-none"
+    >
+      {current === i ? (
+        <img src={dot} className="w-[15px] h-[15px]" alt="active dot" />
+      ) : (
+        <div className="w-[9px] h-[9px] rounded-full bg-[#CECECE]" />
+      )}
+    </button>
+  ))}
+</div>
+
             </section>
         </>
     )
