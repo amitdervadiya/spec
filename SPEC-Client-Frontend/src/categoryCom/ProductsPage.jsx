@@ -127,18 +127,18 @@ export default function ProductsPage() {
         ></div>
       )}
 
-    <div className={`absolute top-0 left-0 bg-white z-50 w-[75%] h-max rounded-r-2xl shadow-xl p-5 transition-all duration-500 sm:hidden
+    <div className={`absolute top-0 left-0 bg-white1 z-50 w-[75%] h-max   p-5 transition-all duration-500 sm:hidden
   ${mobileFilterOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}`}
 >
 
 
         <div className="flex justify-between mb-4">
            <div
-          className=" flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px]  justify-center items-center cursor-pointer"
+          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button mb-4 justify-center items-center cursor-pointer"
           onClick={() => setMobileFilterOpen(true)}
         >
-          <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">
-            <img src={filter} alt="" className="w-5" /> FILTER
+          <p className="text-[var(--brown)] flex gap-2  font-medium text-sm">
+            <img src={filter} alt="" className="w-5 max-sm:w-[15px]" /> FILTER
           </p>
         </div>
           <button onClick={() => setMobileFilterOpen(false)} className="text-xl text-[var(--brown)] font-bold">✕</button>
@@ -185,11 +185,11 @@ export default function ProductsPage() {
 
         {/* Mobile FILTER button */}
         <div
-          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mb-4 justify-center items-center cursor-pointer"
+          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button mb-4 justify-center items-center cursor-pointer"
           onClick={() => setMobileFilterOpen(true)}
         >
-          <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">
-            <img src={filter} alt="" className="w-5" /> FILTER
+          <p className="text-[var(--brown)] flex gap-2  font-medium text-sm">
+            <img src={filter} alt="" className="w-5 max-sm:w-[15px]" /> FILTER
           </p>
         </div>
 

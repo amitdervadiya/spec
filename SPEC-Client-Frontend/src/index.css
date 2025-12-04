@@ -37,9 +37,17 @@
    font-family: "Montserrat", sans-serif;
    background-color: #FFFDFA;
  }
- /* Desktop BATH Dropdown */
+ .bg-white1{
+   background-color: #FFFDFA;
+
+ }
 .dropdown {
   position: relative;
+}
+.mobile-button{
+  height: 35px;
+  width: max-content;
+
 }
 
 .dropdown-menu {
@@ -338,11 +346,16 @@ nav ul li a:hover{
 background: url('./assets//images//bg-ex.png') center center no-repeat; background-attachment: fixed;
  }
  .bg-cat{
- 
   background-position: center;
-
-
  }
+ .mobile-button{
+  height: 35px;
+  width: max-content;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
  }
 
 
