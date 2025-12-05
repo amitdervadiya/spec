@@ -69,8 +69,6 @@ export default function ProductsPage() {
     <>
    <div className="flex justify-center items-center w-full">
     <div className="w-[85%]  flex gap-10 mt-[130px] relative max-lg:flex-col">
-
-      {/* FILTER SIDEBAR - DESKTOP */}
       <div className="w-[285px] max-lg:hidden h-max ">
         <div className="px-5 rounded-full border border-[#2A2928] w-max flex border-opacity-[20%] h-[50px] mb-4 justify-center items-center">
           <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">
@@ -118,14 +116,7 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* FILTER SIDEBAR - MOBILE SLIDE PANEL */}
-      {mobileFilterOpen && (
-        <div
-        className="absolute inset-0 bg-black/30 z-40 lg:hidden"
-
-          onClick={() => setMobileFilterOpen(false)}
-        ></div>
-      )}
+    
 
     <div className={`absolute top-0 left-0 bg-white1 z-50 w-[75%] h-max   p-5 transition-all duration-500 sm:hidden
   ${mobileFilterOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}`}
@@ -144,19 +135,18 @@ export default function ProductsPage() {
           <button onClick={() => setMobileFilterOpen(false)} className="text-xl text-[var(--brown)] font-bold">✕</button>
         </div>
 
-        {/* SAME FILTER UI */}
         {filters.map((f, i) => (
           <div key={i} className="mb-6 flex gap-[25px] flex-col pb-[15px] border-b border-[#110A00] border-opacity-[10%]">
             <button
               onClick={() => toggleFilter(i)}
-              className="flex justify-between w-full text-[18px] font-semibold text-[var(--black)]"
+              className="flex justify-between w-full text-[18px] max-sm:text-[15px] font-semibold text-[var(--black)]"
             >
               {f.label}
               <img src={down} className={`w-5 transition-transform ${openFilter === i ? "rotate-180" : ""}`} />
             </button>
 
             {openFilter === i && (
-              <ul className="gap-5 flex flex-col text-[18px] text-[var(--black)]">
+              <ul className="gap-5 flex flex-col text-[18px] max-sm:text-[15px] text-[var(--black)]">
                 {f.list.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-5">
                     <input
@@ -180,12 +170,17 @@ export default function ProductsPage() {
           </div>
       </div>
 
-      {/* PRODUCT SECTION */}
+
       <div className="flex-1">
 
-        {/* Mobile FILTER button */}
-        <div
-          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button mb-4 justify-center items-center cursor-pointer"
+     
+
+        <div className="flex items-center py-2 justify-between mb-1 ">
+          <p className="text-[var(--black)] text-[18px] font-medium max-sm:hidden">
+            {sortedProducts.length} products
+          </p>
+             <div
+          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button  justify-center items-center cursor-pointer"
           onClick={() => setMobileFilterOpen(true)}
         >
           <p className="text-[var(--brown)] flex gap-2  font-medium text-sm">
@@ -193,13 +188,7 @@ export default function ProductsPage() {
           </p>
         </div>
 
-        {/* Top bar */}
-        <div className="flex items-center py-2 justify-between mb-1">
-          <p className="text-[var(--black)] text-[18px] font-medium">
-            {sortedProducts.length} products
-          </p>
-
-          <div className="relative text-[var(--black)] text-[18px] font-medium">
+          <div className="relative text-[var(--black)] text-[18px] max-sm:text-[13px] font-medium">
             <button
               className="flex gap-1 items-center px-3 py-1"
               onClick={() => setSortOpen(!sortOpen)}
@@ -222,12 +211,11 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-3 max-2xl:grid-cols-3  mt-[15px] gap-6 max-lg:grid-cols-2 max-sm:grid-cols-2">
+        <div className="grid grid-cols-3 max-2xl:grid-cols-3  mt-[15px] gap-6 max-sm:gap-[10px] max-lg:grid-cols-2 max-sm:grid-cols-2">
           {sortedProducts.map((p, idx) => (
-            <div key={idx} className="bg-white slide-ac  border group">
+            <div key={idx} className="bg-white slide-ac flex flex-col  max-sm:h-max  border group">
               <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
-              <div className="p-4 gap-5  view-bg flex flex-col">
+              <div className="p-4 gap-5 max-sm:px-[10px] max-sm:py-[15px] max-sm:gap-[10px]   view-bg flex flex-col">
                 <div className="flex items-center justify-between">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
@@ -240,14 +228,14 @@ export default function ProductsPage() {
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-[var(--black)] 2xl:text-[22px] text-[18px] font-bold max-sm:text-[15px] h-white">
+                  <h2 className="text-[var(--black)] 2xl:text-[22px] text-[16px] font-bold max-sm:text-[14px] h-white">
                     {p.name}
                   </h2>
                   <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden h-white">
                     code : <span className="text-[var(--black)] h-white">{p.code}</span>
                   </p>
                 </div>
-                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[15px]  font-bold flex items-center gap-1">
+                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[13px]  font-bold flex items-center gap-1">
                   VIEW ALL
               <img src={right} alt=""  className="star"/>
                 </a>
