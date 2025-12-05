@@ -128,13 +128,13 @@ export default function NavbarHero() {
             <ul className="flex items-center gap-[60px] max-xl:gap-[30px] max-lg:gap-[20px] 
                      text-[17px] max-lg:text-[15px] uppercase tracking-wide text-white font-semibold">
 
-              <li><Link to={"/"}><a href="#" className="text-[var(--brown)]">Home</a></Link></li>
+              <li><Link to={"/"}><a href="" className="text-[var(--brown)]">Home</a></Link></li>
 
             <li><a href="#">About Us</a></li>
 
 
             <li className="dropdown">
-              <a href="#" className="flex gap-2" onClick={category}>BATH <img src={cartdown} alt="" /></a>
+              <a href="" className="flex gap-2" onClick={category}>BATH <img src={cartdown} alt="" /></a>
               <ul className="dropdown-menu">
                 {bathItems.map((it, idx) => (
                   <li key={idx}>
@@ -144,9 +144,9 @@ export default function NavbarHero() {
               </ul>
             </li>
 
-            <li><a href="#">Review</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="">Review</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Contact</a></li>
 
           </ul>
         </nav>
