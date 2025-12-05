@@ -121,6 +121,7 @@ export default function FooterSection() {
               </div>
             </div>
           )}
+        
         </div>
       </div>
     );
@@ -373,15 +374,20 @@ export default function FooterSection() {
               <div className="h-[21px] w-[1px] text-[14px] bg-[#7F8684] "></div>
               <p>Diversity Policy</p>
             </div>
-            {isVisible && (
-              <button
-                onClick={scrollToTop}
-                className="absolute right-0 bottom-4 z-50 bg-white p-3 rounded-full  hover:scale-110 transition-all">
-                <img src={arrowup} alt="Go to Top" className="w-5 h-5 invert" />
-              </button>
-            )}
+          
           </div>
         </div>
+        {isVisible && (
+  <button
+    onClick={scrollToTop}
+    className="fixed right-6 bottom-6 z-[9999] p-3 rounded-full 
+    border border-white border-opacity-20
+    backdrop-blur-md 
+    hover:scale-110 transition-all">
+    <img src={arrowup} alt="Go to Top" className="w-6 h-6" />
+  </button>
+)}
+
       </footer>
     </section>
   );
