@@ -125,7 +125,7 @@ export default function ProductsPage() {
 
         <div className="flex justify-between mb-4">
            <div
-          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button mb-4 justify-center items-center cursor-pointer"
+          className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button  justify-center items-center cursor-pointer"
           onClick={() => setMobileFilterOpen(true)}
         >
           <p className="text-[var(--brown)] flex gap-2  font-medium text-sm">
