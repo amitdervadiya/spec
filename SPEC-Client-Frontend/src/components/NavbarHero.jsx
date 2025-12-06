@@ -58,8 +58,8 @@ export default function NavbarHero() {
 
   return (
     <>
-      <div className="w-full max-sm:hidden bg-white  py-2 border-b border-gray-200 ">
-        <div className="mx-auto w-[85%] flex flex-col md:flex-row justify-between items-center  max-sm:px-6 max-lg:px-8 ">
+      <div className="w-full max-sm:hidden bg-white flex justify-center  py-2 border-b border-gray-200 ">
+        <div className=" w-[85%] flex flex-col md:flex-row justify-between items-center  ">
 
           <div className="flex items-center gap-4 text-[#110A00] mb-2 md:mb-0">
             <img src={facebook} alt="" />

@@ -58,7 +58,7 @@ export default function OurProducts() {
     name: "PAPER HOLDER",
     image: product5,
     dotMobile: { top: "60%", left: "40%" },
-    dotTablet: { top: "60%", left: "50%" },
+    dotTablet: { top: "61%", left: "39%" },
     dotLaptop: { top: "62%", left: "42%" },
     dotDesktop: { top: "63%", left: "43%" },
     dotPc: { top: "62%", left: "44%" },
@@ -68,7 +68,7 @@ export default function OurProducts() {
     name: "SHELF",
     image: product6,
     dotMobile: { top: "65%", left: "32%" },
-    dotTablet: { top: "28%", left: "92%" },
+    dotTablet: { top: "68%", left: "28%" },
     dotLaptop: { top: "64%", left: "35%" },
     dotDesktop: { top: "70%", left: "34%" },
     dotPc: { top: "65%", left: "36%" },
@@ -78,7 +78,7 @@ export default function OurProducts() {
     name: "FLOOR TRAP", 
     image: product7,
     dotMobile: { top: "92%", left: "86%" },
-    dotTablet: { top: "91%", left: "94%" },
+    dotTablet: { top: "92%", left: "94%" },
     dotLaptop: { top: "94%", left: "83%" },
     dotDesktop: { top: "95%", left: "82%" },
     dotPc: { top: "94%", left: "76%" },
@@ -88,7 +88,7 @@ export default function OurProducts() {
     name: "WATER TAP",
     image: product8,
     dotMobile: { top: "47%", left: "25%" },
-    dotTablet: { top: "47%", left: "33%" },
+    dotTablet: { top: "48%", left: "20%" },
     dotLaptop: { top: "50%", left: "39%" },
     dotDesktop: { top: "49%", left: "37%" },
     dotPc: { top: "47%", left: "32%" },
@@ -164,7 +164,7 @@ export default function OurProducts() {
                   max-sm:w-[152px]
                   max-sm:h-[168px]
                   max-sm:p-[10px]
-                  max-lg:w-[152px]
+                  max-lg:w-[178px]
                   max-lg:h-[168px]
                   max-lg::p-[10px]
                   flex flex-col justify-between
@@ -177,8 +177,8 @@ export default function OurProducts() {
                   className="w-[242px] h-[200px] object-contain mx-auto max-lg:h-max max-sm:w-[138px] max-sm:h-[114px]"
                 />
 
-                <div className=" flex max-sm:mt-[10px] justify-between w-full items-center">
-                  <span className="text-[var(--brown)] font-bold text-[22px] max-lg:text-[18px] leading-none underline max-sm:text-[15px]">
+                <div className=" flex max-sm:mt-[10px] justify-between w-full items-center max-lg:mt-1">
+                  <span className="text-[var(--brown)] font-bold text-[22px] max-lg:text-[18px]  leading-none underline max-sm:text-[15px]">
                     {activeProduct.name}
                   </span>
                   <img src={uparrow} alt="" className="max-sm:h-5 w-5" />
