@@ -18,8 +18,8 @@ export default function OurProducts() {
     name: "TUMBLER",
     image: product1,
     dotMobile: { top: "48%", left: "41%" },
-    dotTablet: { top: "48%", left: "50%" },
-    dotLaptop: { top: "50%", left: "57%" },
+    dotTablet: { top: "48%", left: "40%" },
+    dotLaptop: { top: "50%", left: "42%" },
     dotDesktop: { top: "50%", left: "43%" },
     dotPc: { top: "50%", left: "44%" },
     dotUltra: { top: "50%", left: "44%" },
@@ -28,8 +28,8 @@ export default function OurProducts() {
     name: "TOWEL RACK",
     image: product2,
     dotMobile: { top: "50%", left: "63%" },
-    dotTablet: { top: "56%", left: "73%" },
-    dotLaptop: { top: "53%", left: "77%" },
+    dotTablet: { top: "52%", left: "67%" },
+    dotLaptop: { top: "53%", left: "62%" },
     dotDesktop: { top: "52%", left: "63%" },
     dotPc: { top: "52%", left: "60%" },
     dotUltra: { top: "52%", left: "60%" }, // NEW
@@ -38,8 +38,8 @@ export default function OurProducts() {
     name: "SHOWERS",
     image: product3,
     dotMobile: { top: "11%", left: "73%" },
-    dotTablet: { top: "9%", left: "82%" },
-    dotLaptop: { top: "10%", left: "85%" },
+    dotTablet: { top: "12%", left: "78%" },
+    dotLaptop: { top: "10%", left: "71%" },
     dotDesktop: { top: "10%", left: "70%" },
     dotPc: { top: "10%", left: "66%" },
     dotUltra: { top: "10%", left: "67%" }, // NEW
@@ -48,8 +48,8 @@ export default function OurProducts() {
     name: "DISPENSER",
     image: product4,
     dotMobile: { top: "17%", left: "83%" },
-    dotTablet: { top: "20%", left: "48%" },
-    dotLaptop: { top: "19%", left: "94%" },
+    dotTablet: { top: "16%", left: "90%" },
+    dotLaptop: { top: "15%", left: "81%" },
     dotDesktop: { top: "15%", left: "79%" },
     dotPc: { top: "15%", left: "74%" },
     dotUltra: { top: "15%", left: "74%" }, // NEW
@@ -59,7 +59,7 @@ export default function OurProducts() {
     image: product5,
     dotMobile: { top: "60%", left: "40%" },
     dotTablet: { top: "60%", left: "50%" },
-    dotLaptop: { top: "62%", left: "53%" },
+    dotLaptop: { top: "62%", left: "42%" },
     dotDesktop: { top: "63%", left: "43%" },
     dotPc: { top: "62%", left: "44%" },
     dotUltra: { top: "62%", left: "44%" }, // NEW
@@ -69,17 +69,17 @@ export default function OurProducts() {
     image: product6,
     dotMobile: { top: "65%", left: "32%" },
     dotTablet: { top: "28%", left: "92%" },
-    dotLaptop: { top: "64%", left: "45%" },
+    dotLaptop: { top: "64%", left: "35%" },
     dotDesktop: { top: "70%", left: "34%" },
     dotPc: { top: "65%", left: "36%" },
     dotUltra: { top: "65%", left: "36%" }, // NEW
   },
   {
-    name: "FLOOR TRAP",
+    name: "FLOOR TRAP", 
     image: product7,
     dotMobile: { top: "92%", left: "86%" },
     dotTablet: { top: "91%", left: "94%" },
-    dotLaptop: { top: "93%", left: "91%" },
+    dotLaptop: { top: "94%", left: "83%" },
     dotDesktop: { top: "95%", left: "82%" },
     dotPc: { top: "94%", left: "76%" },
     dotUltra: { top: "94%", left: "76%" }, // NEW
@@ -164,17 +164,21 @@ export default function OurProducts() {
                   max-sm:w-[152px]
                   max-sm:h-[168px]
                   max-sm:p-[10px]
+                  max-lg:w-[152px]
+                  max-lg:h-[168px]
+                  max-lg::p-[10px]
                   flex flex-col justify-between
+                  
                 "
               >
                 <img
                   src={activeProduct.image}
                   alt={activeProduct.name}
-                  className="w-[242px] h-[200px] object-contain mx-auto max-sm:w-[138px] max-sm:h-[114px]"
+                  className="w-[242px] h-[200px] object-contain mx-auto max-lg:h-max max-sm:w-[138px] max-sm:h-[114px]"
                 />
 
-                <div className="mt-2 flex max-sm:mt-[10px] justify-between w-full items-center">
-                  <span className="text-[var(--brown)] font-bold text-[22px] leading-none underline max-sm:text-[15px]">
+                <div className=" flex max-sm:mt-[10px] justify-between w-full items-center">
+                  <span className="text-[var(--brown)] font-bold text-[22px] max-lg:text-[18px] leading-none underline max-sm:text-[15px]">
                     {activeProduct.name}
                   </span>
                   <img src={uparrow} alt="" className="max-sm:h-5 w-5" />
