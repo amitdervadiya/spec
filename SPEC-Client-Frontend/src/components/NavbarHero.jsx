@@ -20,7 +20,7 @@ import x from "../assets/images/navx.svg";
 import arrowrightlog from "../assets/images/ArrowRight(1).svg";
 import Arrowleft from "../assets/images/back.svg"
 import cartdown from "../assets/images/CaretDown.svg"
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 
 
@@ -29,10 +29,10 @@ export default function NavbarHero() {
   const [langOpen, setLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState("EN");
   const [bathScreen, setBathScreen] = useState(false);
-  // const navigate = useNavigate();
-  // const category = () => {
-  //   navigate("/categories")
-  // }
+  const navigate = useNavigate();
+  const category = () => {
+    navigate("/categories")
+  }
  
 
 
@@ -134,7 +134,7 @@ export default function NavbarHero() {
 
 
             <li className="dropdown">
-           <Link to={"/categories"}>  <a href="" className="flex gap-2">BATH <img src={cartdown} alt="" /></a> </Link> 
+        <a href="" className="flex gap-2" onClick={category}>BATH <img src={cartdown} alt="" /></a> 
               <ul className="dropdown-menu">
                 {bathItems.map((it, idx) => (
                   <li key={idx}>

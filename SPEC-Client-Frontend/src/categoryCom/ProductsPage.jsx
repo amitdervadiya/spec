@@ -8,10 +8,10 @@ import right from "../assets/images/brownright.svg"
 
 export default function ProductsPage() {
   const products = [
-    { id: 1, name: "Towel Rack - Black Matt", code: "2001", rating: 5, price: 850, steelType: "202", color: "Black Matt", shape: "Square", image: productImg },
-    { id: 2, name: "Towel Rack - Chrome", code: "2002", rating: 4, price: 750, steelType: "304", color: "Chrome", shape: "Round", image: productImg },
-    { id: 3, name: "Double Shelf Rack - Gold", code: "2010", rating: 5, price: 1950, steelType: "304", color: "Gold", shape: "Square", image: productImg },
-    { id: 4, name: "Dispenser Holder - Black Matt", code: "2015", rating: 3, price: 650, steelType: "202", color: "Black Matt", shape: "Round", image: productImg },
+    { id: 1, name: "Towel Rack - Black Matt", code: "2001", rating: 5, price: 850, steelType:"202", color: "Black Matt", shape: "Square", image: productImg },
+    { id: 2, name: "Towel Rack - Chrome", code: "2002", rating: 4, price: 750, steelType:"304", color: "Chrome", shape: "Round", image: productImg },
+    { id: 3, name: "Double Shelf Rack - Gold", code: "2010", rating: 5, price: 1950, steelType:"304", color: "Gold", shape: "Square", image: productImg },
+    { id: 4, name: "Dispenser Holder - Black Matt", code: "2015", rating: 3, price: 650, steelType:"202", color: "Black Matt", shape: "Round", image: productImg },
     { id: 5, name: "Shower Shelf - Rose Gold", code: "2023", rating: 5, price: 2250, steelType: "304", color: "Rose Gold", shape: "Square", image: productImg },
     { id: 6, name: "Paper Holder - Chrome", code: "2030", rating: 4, price: 590, steelType: "202", color: "Chrome", shape: "Round", image: productImg },
     { id: 7, name: "Corner Shelf - Gold", code: "2041", rating: 5, price: 1350, steelType: "304", color: "Gold", shape: "Round", image: productImg },
@@ -118,7 +118,7 @@ export default function ProductsPage() {
 
     
 
-    <div className={`absolute top-0 left-0 bg-white1 z-50 w-[75%] h-max   p-5 transition-all duration-500 sm:hidden
+    <div className={`fixed top-0 left-0 bg-white1 z-50 w-[75%] h-full   p-5 transition-all duration-500 sm:hidden
   ${mobileFilterOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}`}
 >
 

@@ -121,7 +121,7 @@ export default function FooterSection() {
               </div>
             </div>
           )}
-        
+
         </div>
       </div>
     );
@@ -171,7 +171,7 @@ export default function FooterSection() {
   // Show button when scrolled 300px from top
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 0) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -259,7 +259,7 @@ export default function FooterSection() {
       </div>
 
 
-      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center   max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
+      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center relative   max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
 
 
         <div className="mt-[190px] max-sm:gap-[35px] max-xl:gap-[50px] max-2xl:gap-[50px] flex max-lg:flex-col gap-[200px] max-[1700px]:gap-[100px] max-sm:flex-col  w-[85%]">
@@ -374,21 +374,23 @@ export default function FooterSection() {
               <div className="h-[21px] w-[1px] text-[14px] bg-[#7F8684] "></div>
               <p>Diversity Policy</p>
             </div>
-          
+
           </div>
+
         </div>
+
         {isVisible && (
-  <button
-    onClick={scrollToTop}
-    className="fixed right-6 bottom-6 z-[9999] p-3 rounded-full 
+          <button
+            onClick={scrollToTop}
+            className="absolute right-6 bottom-6 z-50 p-3 rounded-full 
     border border-white border-opacity-20
     backdrop-blur-md 
     hover:scale-110 transition-all">
-    <img src={arrowup} alt="Go to Top" className="w-6 h-6" />
-  </button>
-)}
-
+            <img src={arrowup} alt="Go to Top" className="w-6 h-6" />
+          </button>
+        )}
       </footer>
+
     </section>
   );
 }
