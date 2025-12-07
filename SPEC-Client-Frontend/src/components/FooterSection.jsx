@@ -187,7 +187,7 @@ export default function FooterSection() {
   };
 
   return (
-    <section className="w-full mt-[140px] max-sm:mt-[50px]">
+    <section className="w-full mt-[140px] max-sm:mt-[50px] ">
 
       <div className="relative w-full max-sm:h-[400px] h-[550px]">
 
@@ -213,7 +213,7 @@ export default function FooterSection() {
         relative cursor-pointer max-sm:flex-row max-sm:h-[48px]
         max-sm:p-[15px] max-sm:w-[335px] max-sm:justify-between max-md:flex-col
         border-3   max-xl:px-[30px] border max-md:p-[20px] max-lg:p-[20px] max-2xl:p-[30px] max-xl:p-[30px] max-xl:gap-[10px]
-      `}
+     z-50 `}
             >
               <div className="h-[48px]  w-[3px] bg-[var(--brown)] bor sm:hidden absolute left-0 top-0"></div>
 
@@ -259,7 +259,7 @@ export default function FooterSection() {
       </div>
 
 
-      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max max-lg:h-max max-sm:justify-center relative   max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
+      <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max z-0 max-lg:h-max max-sm:justify-center    max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
 
 
         <div className="mt-[190px] max-sm:gap-[35px] max-xl:gap-[50px] max-2xl:gap-[50px] flex max-lg:flex-col gap-[200px] max-[1700px]:gap-[100px] max-sm:flex-col  w-[85%]">

@@ -33,6 +33,9 @@ export default function NavbarHero() {
   const category = () => {
     navigate("/categories")
   }
+  const contact = ()=>{
+    navigate("/contact")
+  }
  
 
 
@@ -146,7 +149,7 @@ export default function NavbarHero() {
 
             <li><a href="">Review</a></li>
             <li><a href="">FAQ</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="" onClick={contact}>Contact</a></li>
 
           </ul>
         </nav>

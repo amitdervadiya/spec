@@ -104,6 +104,7 @@
        margin-bottom: -6px;
 
  }
+
  .bor {
    visibility: hidden;
  }
@@ -280,6 +281,12 @@ nav ul li a:hover{
   background-size: cover;
   background-position: center;
 }
+.bg-contact{
+  background-image: url("assets//images/contact.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
 
 
 @layer utilities {
@@ -346,7 +353,13 @@ nav ul li a:hover{
 background: url('./assets//images//bg-ex.png') center center no-repeat; background-attachment: fixed;
  }
  .bg-cat{
-  background-position: center;
+  /* background-position: center; */
+  background-image: url("./assets//images/bg-cat.jpg");
+background-position-x: -700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position-y: 50px; */
+
  }
  .mobile-button{
   height: 35px;

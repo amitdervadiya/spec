@@ -118,12 +118,12 @@ export default function ProductsPage() {
 
     
 
-    <div className={`fixed top-0 left-0 bg-white1 z-50 w-[75%] h-full   p-5 transition-all duration-500 sm:hidden
+    <div className={`fixed top-0 left-0 bg-white1 z-50 w-[75%] h-full gap-4 flex flex-col  p-5 transition-all duration-500 sm:hidden
   ${mobileFilterOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}`}
 >
 
 
-        <div className="flex justify-between mb-4">
+        <div className="flex justify-between  pb-4 border-b border-[#110A00] border-opacity-[10%]">
            <div
           className="lg:hidden flex px-5 rounded-full border border-[#2A2928] w-max border-opacity-[20%] h-[50px] mobile-button  justify-center items-center cursor-pointer"
           onClick={() => setMobileFilterOpen(true)}
@@ -136,7 +136,7 @@ export default function ProductsPage() {
         </div>
 
         {filters.map((f, i) => (
-          <div key={i} className="mb-6 flex gap-[25px] flex-col pb-[15px] border-b border-[#110A00] border-opacity-[10%]">
+          <div key={i} className=" flex gap-[25px] flex-col pb-[15px] border-b border-[#110A00] border-opacity-[10%]">
             <button
               onClick={() => toggleFilter(i)}
               className="flex justify-between w-full text-[18px] max-sm:text-[15px] font-semibold text-[var(--black)]"
