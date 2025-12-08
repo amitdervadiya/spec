@@ -1,18 +1,21 @@
 import React from 'react'
 import rightarrow from "../assets/images/ArrowRight(1).svg"
+import map from "../assets/images/fmapicon.svg"
+import phone from "../assets/images/fphoneicon.svg"
+import email from "../assets/images/femailicon.svg"
 
 export default function Contacts() {
   return (
     <>
-      <section className='flex justify-center items-center'>
+      <section className='flex justify-center items-center mt-[140px]'>
 
         <div className='w-[85%] flex justify-center items-center'>
           <div className='flex justify-between w-full  h-[800px] '>
-            <div className='bg-cn w-[45%] h-[800px]'>
+            <div className='bg-cn w-[48%] h-[800px]'>
 
             </div>
 
-            <div className='flex w-[45%] flex-col bg-[#FFF8EE] justify-start items-start px-[25px]'>
+            <div className='flex w-[48%] flex-col bg-[#FFF8EE] justify-start items-start px-[25px]'>
               <h3 className='text-[var(--brown)]'>spec</h3>
               <h1 className='text-[50px] font-bold leading-none'>Enquire Now</h1>
               <p className='text-[18px] mt-[30px] text-[var(--grey)]'>We’re here to assist you with any questions about your orders, products, or services. Please fill out the form below and our support team will respond shortly.</p>
@@ -42,17 +45,64 @@ export default function Contacts() {
                   <textarea name="" id="" placeholder='your message here' className='h-[130px] p-4 border borer-[#E5E5E5]'>
 
                   </textarea>
-                  <a href="">  
-                    <button className='h-[50px] bg-[var(--brown)] '>
-Send Message  <img src={rightarrow} alt="" />
-                  </button>
-                  </a>
+
                 </div>
+                <a href="">
+                  <button className='h-[50px] bg-[var(--brown)] flex text-[17px] font-bold text-white w-full rounded-[50px] justify-center items-center gap-2'>
+                    Send Message  <img src={rightarrow} alt="" className='w-5 h-5' />
+                  </button>
+                </a>
               </div>
 
             </div>
 
           </div>
+        </div>
+      </section>
+      <section className='flex justify-center items-center mt-[140px]'>
+        <div className='w-[85%] flex justify-center items-center h-[175px]'>
+          <div className='flex justify-center w-[30%]  h-[175px] gap-2 items-center p-[25px] border border-[#E4E4E4]'>
+            <div className='flex justify-center items-start '>
+              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
+                <img src={map} alt="" className='h-6 w-6' />
+              </div>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <h6 className='text-[var(--black)] text-[22px] font-semibold'>Office Address</h6>
+              <p className='font-medium text-[16px]'>sed no.12, Gondal Rd, near solvant fatak, chokdi, Rajkot, Kotharia, Gujarat 360022</p>
+            </div>
+          </div>
+          <div className='flex justify-center gap-2 w-[30%]   h-[175px] items-center p-[25px] border border-[#E4E4E4]'>
+            <div className='flex justify-center items-start '>
+              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
+                <img src={phone} alt="" className='h-6 w-6' />
+              </div>
+            </div>
+            <div className='flex flex-col  justify-center gap-2 w-full'>
+              <h6 className='text-[var(--black)] text-[22px] font-semibold'>Sales Reservation Team</h6>
+              <div className='w-full'>
+                <div className='w-full flex justify-between'><span>Rajkot Office:</span> <span>+91 90166 99400</span></div>
+                <div className='w-full flex justify-between'> <span>At Resort:</span><span>+91 98793 68602</span></div>
+
+
+              </div>
+            </div>
+          </div>
+          <div className='flex justify-center gap-2 items-center  h-[175px] w-[30%] p-[25px] border border-[#E4E4E4]'>
+            <div className='flex justify-center items-start '>
+              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
+                <img src={email} alt="" className='h-6 w-6' />
+              </div>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <h6 className='text-[var(--black)] text-[22px] font-semibold'>Office Email</h6>
+              <p className='font-medium text-[16px]'>spec@infospecco.in</p>
+            </div>
+          </div>
+
+
+
+
         </div>
       </section>
     </>
