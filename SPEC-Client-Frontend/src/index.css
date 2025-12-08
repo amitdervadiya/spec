@@ -284,8 +284,20 @@ nav ul li a:hover{
 .bg-contact{
   background-image: url("assets//images/contact.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 
+}
+.bg-cn{
+  background-image: url("assets//images//img.png"); 
+}
+
+.input1{
+  height: 50px;
+  padding-left: 15px;
+  background-color: #FFFDFA;
+  border:1px solid #E5E5E5;
+  border-radius: 60px;
+  
 }
 
 
@@ -324,6 +336,7 @@ nav ul li a:hover{
    font-size: 30px !important;
    line-height: normal !important;
      margin-bottom: -5px !important;
+
    }
    .icon{
     height: 38px;
