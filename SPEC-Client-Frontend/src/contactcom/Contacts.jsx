@@ -59,43 +59,41 @@ export default function Contacts() {
           </div>
         </div>
       </section>
-      <section className='flex justify-center items-center mt-[140px]'>
-        <div className='w-[85%] flex justify-center items-center h-[175px]'>
-          <div className='flex justify-center w-[30%]  h-[175px] gap-2 items-center p-[25px] border border-[#E4E4E4]'>
-            <div className='flex justify-center items-start '>
+      <section className='flex justify-center items-center mt-[140px] max-sm:mt-[50px] '>
+        <div className='w-[85%] flex justify-center max-sm:flex-col items-center max-sm:h-max h-[175px]'>
+          <div className='flex justify-center w-[30%] max-sm:w-full  h-[175px] gap-2 items-center p-[25px] border border-[#E4E4E4]'>
+            <div className='flex justify-center items-start h-full'>
               <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
                 <img src={map} alt="" className='h-6 w-6' />
               </div>
             </div>
             <div className='flex flex-col gap-2'>
-              <h6 className='text-[var(--black)] text-[22px] font-semibold'>Office Address</h6>
+              <h6 className='text-[var(--black)] text-[22px]  max-sm:text-[18px] font-semibold'>Office Address</h6>
               <p className='font-medium text-[16px]'>sed no.12, Gondal Rd, near solvant fatak, chokdi, Rajkot, Kotharia, Gujarat 360022</p>
             </div>
           </div>
-          <div className='flex justify-center gap-2 w-[30%]   h-[175px] items-center p-[25px] border border-[#E4E4E4]'>
-            <div className='flex justify-center items-start '>
+          <div className='flex justify-center gap-2 w-[30%]   max-sm:w-full   h-[175px] items-center p-[25px] border border-[#E4E4E4]'>
+            <div className='flex justify-center items-start h-full'>
               <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
                 <img src={phone} alt="" className='h-6 w-6' />
               </div>
             </div>
             <div className='flex flex-col  justify-center gap-2 w-full'>
-              <h6 className='text-[var(--black)] text-[22px] font-semibold'>Sales Reservation Team</h6>
+              <h6 className='text-[var(--black)] text-[22px] font-semibold max-sm:text-[18px]'>Sales Reservation Team</h6>
               <div className='w-full'>
                 <div className='w-full flex justify-between'><span>Rajkot Office:</span> <span>+91 90166 99400</span></div>
                 <div className='w-full flex justify-between'> <span>At Resort:</span><span>+91 98793 68602</span></div>
-
-
               </div>
             </div>
           </div>
-          <div className='flex justify-center gap-2 items-center  h-[175px] w-[30%] p-[25px] border border-[#E4E4E4]'>
-            <div className='flex justify-center items-start '>
+          <div className='flex justify-center gap-2 items-center max-sm:justify-start  h-[175px] w-[30%]  max-sm:w-full  p-[25px] border border-[#E4E4E4]'>
+            <div className='flex justify-center items-star h-full'>
               <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
                 <img src={email} alt="" className='h-6 w-6' />
               </div>
             </div>
-            <div className='flex flex-col gap-2'>
-              <h6 className='text-[var(--black)] text-[22px] font-semibold'>Office Email</h6>
+            <div className='flex flex-col gap-2 justify-start'>
+              <h6 className='text-[var(--black)] text-[22px] font-semibold max-sm:text-[18px]'>Office Email</h6>
               <p className='font-medium text-[16px]'>spec@infospecco.in</p>
             </div>
           </div>
