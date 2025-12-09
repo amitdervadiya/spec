@@ -277,12 +277,12 @@ nav ul li a:hover{
 }
 
 .bg-cat{
-  background-image: url(assets/images/bg-cat.jpg);
+  background-image: url(assets/images/bg-cat1.jpg);
   background-size: cover;
   background-position: center;
 }
 .bg-contact{
-  background-image: url("assets//images/contact.jpg");
+  background-image: url("assets//images/bg-contact.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -366,12 +366,12 @@ nav ul li a:hover{
 background: url('./assets//images//bg-ex.png') center center no-repeat; background-attachment: fixed;
  }
  .bg-cat{
-  /* background-position: center; */
+ 
   background-image: url("./assets//images/bg-cat.jpg");
-background-position-x: -700px;
+
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position-y: 50px; */
+
 
  }
  .mobile-button{
@@ -381,7 +381,17 @@ background-position-x: -700px;
   font-weight: bold;
   
 }
-
+.input1{
+  height: 40px;
+  padding-left: 15px;
+  background-color: #FFFDFA;
+  border:1px solid #E5E5E5;
+  border-radius: 60px;
+  
+}
+label{
+  font-size: 15px !important;
+}
  }
 @media (min-width:768px) and (max-width:1024px){
     .bg-image {

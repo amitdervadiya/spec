@@ -187,7 +187,7 @@ export default function FooterSection() {
   };
 
   return (
-    <section className="w-full mt-[140px] max-sm:mt-[50px] ">
+    <section className="w-full mt-[140px] max-sm:mt-[50px]   relative">
 
       <div className="relative w-full max-sm:h-[400px] h-[550px]">
 
@@ -379,7 +379,9 @@ export default function FooterSection() {
 
         </div>
 
-        {isVisible && (
+      
+      </footer>
+  {isVisible && (
           <button
             onClick={scrollToTop}
             className="absolute right-6 bottom-6 z-50 p-3 rounded-full 
@@ -389,8 +391,6 @@ export default function FooterSection() {
             <img src={arrowup} alt="Go to Top" className="w-6 h-6" />
           </button>
         )}
-      </footer>
-
     </section>
   );
 }

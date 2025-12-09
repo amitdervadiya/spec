@@ -215,7 +215,7 @@ export default function ProductsPage() {
           {sortedProducts.map((p, idx) => (
             <div key={idx} className="bg-white slide-ac flex flex-col  max-sm:h-max  border group">
               <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
-              <div className="p-4 gap-5 max-sm:px-[10px] max-sm:py-[15px] max-sm:gap-[10px]   view-bg flex flex-col">
+              <div className="p-4 gap-0 max-sm:h-[140px] justify-between 5 max-sm:px-[10px] max-sm:py-[20px] max-sm:gap-[10px]   view-bg flex flex-col">
                 <div className="flex items-center justify-between">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
@@ -228,7 +228,7 @@ export default function ProductsPage() {
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-[var(--black)] 2xl:text-[22px] text-[16px] font-bold max-sm:text-[14px] h-white">
+                  <h2 className="text-[var(--black)] 2xl:text-[22px] mb-2 text-[16px] font-bold max-sm:text-[14px] h-white">
                     {p.name}
                   </h2>
                   <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden h-white">
