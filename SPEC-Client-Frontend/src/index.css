@@ -392,14 +392,36 @@ background: url('./assets//images//bg-ex.png') center center no-repeat; backgrou
 label{
   font-size: 15px !important;
 }
+.box-c{
+  padding: 20px;
+}
  }
-@media (min-width:768px) and (max-width:1024px){
+
+
+
+@media (min-width:768px) and (max-width:1024px)
+{
     .bg-image {
    background-image: url("./assets/images/bg-product.png");
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
  }
+.h6{
+  font-size: 18px !important;
+
+}
+.p-text{
+  font-size: 14px !important;
+}
+.box-c{
+  padding: 15px;
+}
+.a-contact{
+  flex-direction: column;
+}
+
+
 }
 
  @media (min-width:1536px) and (max-width:1800px) {
@@ -410,3 +432,5 @@ label{
      font-size: 35px;
    }
  }
+
+
