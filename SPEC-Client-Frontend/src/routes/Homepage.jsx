@@ -10,6 +10,8 @@ import Accordion from '../components/Accordion';
 import AccessoriesSection from "../components/AccessoriesSection"
 import Experience from "../components/Experience"
 import Hero from '../components/Hero';
+import Location from '../components/Location';
+
 
 
 export default function Homepage() {
@@ -27,6 +29,7 @@ export default function Homepage() {
       <Testimonials />
       <Experience />
       <Accordion />
+      <Location/>
       <FooterSection />
 
 

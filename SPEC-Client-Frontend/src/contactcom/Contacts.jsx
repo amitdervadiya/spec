@@ -48,8 +48,8 @@ export default function Contacts() {
 
                 </div>
                 <a href="">
-                  <button className='h-[50px]  bg-[var(--brown)] flex text-[17px] font-bold text-white w-full rounded-[50px] justify-center items-center gap-2'>
-                    Send Message  <img src={rightarrow} alt="" className='w-5 h-5' />
+                  <button className='h-[50px]  bg-[var(--brown)] max-sm:h-[40px] max-sm:text-[15px]  flex text-[17px] font-bold text-white w-full rounded-[50px] justify-center items-center gap-2'>
+                    Send Message  <img src={rightarrow} alt="" className='w-5 h-5 max-sm:h-[17px] max-sm:w-[17px]' />
                   </button>
                 </a>
               </div>
@@ -63,7 +63,7 @@ export default function Contacts() {
         <div className='w-[85%] flex justify-center max-sm:flex-col items-center max-sm:h-max h-[175px]'>
           <div className='flex justify-center w-[30%] max-sm:w-full  h-[175px] gap-2 items-center p-[25px] border border-[#E4E4E4]'>
             <div className='flex justify-center items-start h-full'>
-              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
+              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[var(--brown)]'>
                 <img src={map} alt="" className='h-6 w-6' />
               </div>
             </div>
@@ -74,25 +74,25 @@ export default function Contacts() {
           </div>
           <div className='flex justify-center gap-2 w-[30%]   max-sm:w-full   h-[175px] items-center p-[25px] border border-[#E4E4E4]'>
             <div className='flex justify-center items-start h-full'>
-              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
+              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[var(--brown)]'>
                 <img src={phone} alt="" className='h-6 w-6' />
               </div>
             </div>
-            <div className='flex flex-col  justify-center gap-2 w-full'>
+            <div className='flex flex-col  justify-center h-full gap-2 w-full'>
               <h6 className='text-[var(--black)] text-[22px] font-semibold max-sm:text-[18px]'>Sales Reservation Team</h6>
-              <div className='w-full'>
-                <div className='w-full flex justify-between'><span>Rajkot Office:</span> <span>+91 90166 99400</span></div>
-                <div className='w-full flex justify-between'> <span>At Resort:</span><span>+91 98793 68602</span></div>
+              <div className='w-full pr-4 h-full'>
+                <a href="tel:+919016699400" className='w-full flex justify-between'><span>Rajkot Office:</span> <span>+91 90166 99400</span></a>
+                <a href="tel:+919879368602" className='w-full flex justify-between'> <span>At Resort:</span><span>+91 98793 68602</span></a>
               </div>
             </div>
           </div>
           <div className='flex justify-center gap-2 items-center max-sm:justify-start  h-[175px] w-[30%]  max-sm:w-full  p-[25px] border border-[#E4E4E4]'>
             <div className='flex justify-center items-star h-full'>
-              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[#C59B5F]'>
+              <div className='h-[45px]  flex justify-center items-center w-[45px] rounded-full bg-[var(--brown)]'>
                 <img src={email} alt="" className='h-6 w-6' />
               </div>
             </div>
-            <div className='flex flex-col gap-2 justify-start'>
+            <div className='flex flex-col gap-2 justify-start h-full'>
               <h6 className='text-[var(--black)] text-[22px] font-semibold max-sm:text-[18px]'>Office Email</h6>
               <p className='font-medium text-[16px]'>spec@infospecco.in</p>
             </div>
