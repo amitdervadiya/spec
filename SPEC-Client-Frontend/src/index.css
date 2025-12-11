@@ -420,7 +420,15 @@ label{
 .a-contact{
   flex-direction: column;
 }
-
+.input-res{
+  flex-direction: column;
+}
+.bg-cn{
+  width: 100%;
+}
+.input-field{
+  width: 100%;
+}
 
 }
 

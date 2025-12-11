@@ -20,7 +20,7 @@ import x from "../assets/images/navx.svg";
 import arrowrightlog from "../assets/images/ArrowRight(1).svg";
 import Arrowleft from "../assets/images/back.svg"
 import cartdown from "../assets/images/CaretDown.svg"
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -33,10 +33,13 @@ export default function NavbarHero() {
   const category = () => {
     navigate("/categories")
   }
-  const contact = ()=>{
+  const contact = () => {
     navigate("/contact")
   }
- 
+  const product = () => {
+    navigate("/products")
+  }
+
 
 
   useEffect(() => {
@@ -133,171 +136,170 @@ export default function NavbarHero() {
 
               <li><Link to={"/"}><a href="" className="text-[var(--brown)]">Home</a></Link></li>
 
-            <li><a href="#">About Us</a></li>
+              <li><a href="#">About Us</a></li>
 
 
-            <li className="dropdown">
-        <a href="" className="flex gap-2" onClick={category}>BATH <img src={cartdown} alt="" /></a> 
-              <ul className="dropdown-menu">
-                {bathItems.map((it, idx) => (
-                  <li key={idx}>
-                    <a href="#">{it}</a>
-                  </li>
-                ))}
-              </ul>
-            </li>
+              <li className="dropdown">
+                <a href="" className="flex gap-2" onClick={category}>BATH <img src={cartdown} alt="" /></a>
+                <ul className="dropdown-menu">
+                  {bathItems.map((it, idx) => (
+                    <li key={idx}>
+                      <a href="#">{it}</a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
 
-            <li><a href="">Review</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="" onClick={contact}>Contact</a></li>
+            
+                <li onClick={product}><a href="">Review</a></li> 
+              <li><a href="">FAQ</a></li>
+              <li><a href="" onClick={contact}>Contact</a></li>
 
-          </ul>
-        </nav>
+            </ul>
+          </nav>
 
-        <div className="hidden md:flex items-center gap-5 text-white text-lg">
-          <img src={search1} alt="" className="h-6 w-6" />
-          <img src={user} alt="" className="h-6 w-6" />
-          <img src={s12} alt="" className="h-6 w-6" />
-        </div>
+          <div className="hidden md:flex items-center gap-5 text-white text-lg">
+            <img src={search1} alt="" className="h-6 w-6" />
+            <img src={user} alt="" className="h-6 w-6" />
+            <img src={s12} alt="" className="h-6 w-6" />
+          </div>
 
-        {/* MOBILE MENU BUTTON */}
-        <button onClick={() => setMenuOpen(true)} className="sm:hidden">
-          <img src={menu} alt="" className="h-[14px] w-[22px]" />
-        </button>
-      </div>
-
-      {/* MOBILE MENU */}
-      <div className={`fixed top-0 right-0 h-[700px] w-full bg-[#fffdfa]
-       transform ${menuOpen ? "translate-x-0" : "translate-x-full"}
-       transition-transform duration-500 ease-in-out z-50`}>
-
-        <div className="flex justify-between items-center h-[60px] px-[20px] border-b border-[#000000] border-opacity-[10%]">
-          <img src={navlogo} alt="logo" className="w-[88px] h-[25px]" />
-          <button onClick={() => setMenuOpen(false)} className="text-[var(--brown)]">
-            <img src={x} alt="" className="h-5 w-5" />
+          <button onClick={() => setMenuOpen(true)} className="sm:hidden">
+            <img src={menu} alt="" className="h-[14px] w-[22px]" />
           </button>
         </div>
 
-        {/* MAIN & SUBMENU SWITCH */}
-        <div className="flex flex-col justify-between w-full nav-height">
-          {!bathScreen ? (
-            <ul className="flex flex-col mt-5 gap-[25px] px-[20px] text-[var(--black)] uppercase tracking-wide text-[15px] font-semibold">
-              <li><a href="#" className="block">Home</a></li>
-              <li><a href="#" className="block">About Us</a></li>
+        <div className={`fixed top-0 right-0 h-[700px] w-full bg-[#fffdfa]
+       transform ${menuOpen ? "translate-x-0" : "translate-x-full"}
+       transition-transform duration-500 ease-in-out z-50`}>
 
-              <li>
-                <button
-                  onClick={() => setBathScreen(true)}
-                  className="w-full flex items-center justify-between hover:text-[var(--brown)] transition-colors duration-300"
-                >
-                  <span>BATH</span>
-                  <img src={rightcaret} alt="" className="w-4 h-4" />
-                </button>
-              </li>
+          <div className="flex justify-between items-center h-[60px] px-[20px] border-b border-[#000000] border-opacity-[10%]">
+            <img src={navlogo} alt="logo" className="w-[88px] h-[25px]" />
+            <button onClick={() => setMenuOpen(false)} className="text-[var(--brown)]">
+              <img src={x} alt="" className="h-5 w-5" />
+            </button>
+          </div>
 
-              <li><a href="#" className="block">Review</a></li>
-              <li><a href="#" className="block">FAQ</a></li>
-              <li><a href="#" className="block">Contact</a></li>
-            </ul>
-          ) : (
-            <div id="submenu" className={`mt-5 ${bathScreen ? "submenu-slide-in" : ""}`}>
+          {/* MAIN & SUBMENU SWITCH */}
+          <div className="flex flex-col justify-between w-full nav-height">
+            {!bathScreen ? (
+              <ul className="flex flex-col mt-5 gap-[25px] px-[20px] text-[var(--black)] uppercase tracking-wide text-[15px] font-semibold">
+                <li><a href="#" className="block">Home</a></li>
+                <li><a href="#" className="block">About Us</a></li>
 
-              <button
-                onClick={() => {
-                  const submenu = document.getElementById("submenu");
-                  submenu.classList.remove("submenu-slide-in");
-                  submenu.classList.add("submenu-slide-out");
-                  setTimeout(() => setBathScreen(false), 400);
-                }}
-                className="flex items-center justify-center gap-2 px-5 text-[var(--brown)] mb-3"
-              >
-                <img src={Arrowleft} alt="" className="h-5 w-5" />
-                <span className="font-bold">Bath</span>
-              </button>
-
-              <ul className="flex flex-col gap-[15px] h-[396px] px-[20px] text-[var(--black)] uppercase tracking-wide text-[15px] font-semibold">
-                {bathItems.map((it, idx) => (
-                  <li key={idx} className="flex items-center justify-between pr-2">
-                    <a href="#">{it}</a>
+                <li>
+                  <button
+                    onClick={() => setBathScreen(true)}
+                    className="w-full flex items-center justify-between hover:text-[var(--brown)] transition-colors duration-300"
+                  >
+                    <span>BATH</span>
                     <img src={rightcaret} alt="" className="w-4 h-4" />
-                  </li>
-                ))}
+                  </button>
+                </li>
+
+                <li><a href="#" className="block">Review</a></li>
+                <li><a href="#" className="block">FAQ</a></li>
+                <li><a href="#" className="block">Contact</a></li>
               </ul>
+            ) : (
+              <div id="submenu" className={`mt-5 ${bathScreen ? "submenu-slide-in" : ""}`}>
 
-            </div>
-          )}
-
-          <div>
-            <div className="flex justify-between flex-col px-[20px]">
-              <div className="flex justify-between items-end">
-           <a href="tel:+919879166592">  <p className="text-[14px] font-medium flex items-center gap-2">
-              <img src={h1} alt="" className="w-4 h-4" /> +91 98791 66592
-                </p></a>   
-             <a href="tel: +919016699400">   <p className="text-[14px] font-medium flex items-center gap-2">
-                  <img src={h2} alt="" className="w-4 h-4" /> +91 90166 99400
-                </p></a>
-              </div>
-
-              <button className="mt-6 w-full flex justify-center text-[15px] gap-[7px] items-center bg-[var(--brown)] text-white h-[35px] rounded-full font-bold">
-                LOG IN <img src={arrowrightlog} alt="" className="h-[17px] w-[17px]" />
-              </button>
-            </div>
-
-            <div className="flex h-[65px] justify-between px-5 bg-[#F4F2EE] mt-[25px] items-center">
-              <div className="flex items-center gap-3">
-                <img src={facebook} alt="" />
-                <img src={twitter} alt="" />
-                <img src={linkedin} alt="" />
-                <img src={insta} alt="" />
-                <img src={youtube} alt="" className="w-[17px] h-[12px]" />
-              </div>
-
-              <div className="relative text-[16px]">
                 <button
-                  onClick={() => setLangOpen(!langOpen)}
-                  className="flex items-center gap-1 text-[#2A2928] hover:text-[#110A00] transition"
+                  onClick={() => {
+                    const submenu = document.getElementById("submenu");
+                    submenu.classList.remove("submenu-slide-in");
+                    submenu.classList.add("submenu-slide-out");
+                    setTimeout(() => setBathScreen(false), 400);
+                  }}
+                  className="flex items-center justify-center gap-2 px-5 text-[var(--brown)] mb-3"
                 >
-                  <img src={maplogo} alt="" />
-                  <span className="w-[25px]">{selectedLang}</span>
-                  {langOpen ? (
-                    <img src={up} alt="" className="ml-1 w-5 h-5" />
-                  ) : (
-                    <img src={down} alt="" className="ml-1 w-5 h-5" />
-                  )}
+                  <img src={Arrowleft} alt="" className="h-5 w-5" />
+                  <span className="font-bold">Bath</span>
                 </button>
 
-                {langOpen && (
-                  <div className="absolute right-0 bottom-full mb-2 w-20 bg-white border border-[#2A2928] rounded z-50">
+                <ul className="flex flex-col gap-[15px] h-[396px] px-[20px] text-[var(--black)] uppercase tracking-wide text-[15px] font-semibold">
+                  {bathItems.map((it, idx) => (
+                    <li key={idx} className="flex items-center justify-between pr-2">
+                      <a href="#">{it}</a>
+                      <img src={rightcaret} alt="" className="w-4 h-4" />
+                    </li>
+                  ))}
+                </ul>
 
-                    {["EN", "HI", "GU"].map((lang) => (
-                      <button
-                        key={lang}
-                        onClick={() => {
-                          setSelectedLang(lang);
-                          setLangOpen(false);
-                        }}
-                        className="block w-full text-left px-3 py-1 text-[#2A2928] hover:bg-[#110A00] hover:text-white transition"
-                      >
-                        {lang}
-                      </button>
-                    ))}
-                  </div>
-                )}
+              </div>
+            )}
+
+            <div>
+              <div className="flex justify-between flex-col px-[20px]">
+                <div className="flex justify-between items-end">
+                  <a href="tel:+919879166592">  <p className="text-[14px] font-medium flex items-center gap-2">
+                    <img src={h1} alt="" className="w-4 h-4" /> +91 98791 66592
+                  </p></a>
+                  <a href="tel: +919016699400">   <p className="text-[14px] font-medium flex items-center gap-2">
+                    <img src={h2} alt="" className="w-4 h-4" /> +91 90166 99400
+                  </p></a>
+                </div>
+
+                <button className="mt-6 w-full flex justify-center text-[15px] gap-[7px] items-center bg-[var(--brown)] text-white h-[35px] rounded-full font-bold">
+                  LOG IN <img src={arrowrightlog} alt="" className="h-[17px] w-[17px]" />
+                </button>
+              </div>
+
+              <div className="flex h-[65px] justify-between px-5 bg-[#F4F2EE] mt-[25px] items-center">
+                <div className="flex items-center gap-3">
+                  <img src={facebook} alt="" />
+                  <img src={twitter} alt="" />
+                  <img src={linkedin} alt="" />
+                  <img src={insta} alt="" />
+                  <img src={youtube} alt="" className="w-[17px] h-[12px]" />
+                </div>
+
+                <div className="relative text-[16px]">
+                  <button
+                    onClick={() => setLangOpen(!langOpen)}
+                    className="flex items-center gap-1 text-[#2A2928] hover:text-[#110A00] transition"
+                  >
+                    <img src={maplogo} alt="" />
+                    <span className="w-[25px]">{selectedLang}</span>
+                    {langOpen ? (
+                      <img src={up} alt="" className="ml-1 w-5 h-5" />
+                    ) : (
+                      <img src={down} alt="" className="ml-1 w-5 h-5" />
+                    )}
+                  </button>
+
+                  {langOpen && (
+                    <div className="absolute right-0 bottom-full mb-2 w-20 bg-white border border-[#2A2928] rounded z-50">
+
+                      {["EN", "HI", "GU"].map((lang) => (
+                        <button
+                          key={lang}
+                          onClick={() => {
+                            setSelectedLang(lang);
+                            setLangOpen(false);
+                          }}
+                          className="block w-full text-left px-3 py-1 text-[#2A2928] hover:bg-[#110A00] hover:text-white transition"
+                        >
+                          {lang}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
+
         </div>
 
-      </div>
+        {menuOpen && (
+          <div className="fixed inset-0 bg-black/50 z-40" onClick={() => setMenuOpen(false)} />
+        )}
 
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40" onClick={() => setMenuOpen(false)} />
-      )}
-
-    </header >
+      </header >
 
 
-    
+
 
 
 
