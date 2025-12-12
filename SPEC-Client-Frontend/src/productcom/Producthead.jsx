@@ -123,35 +123,69 @@ export default function Producthead() {
                                         {colors.map((c) => (
                                             <div
                                                 key={c.id}
-                                               
-                                                className="flex items-center gap-2 cursor-pointer"
+
+                                                className="flex items-center gap-5 cursor-pointer"
                                             >
                                                 <div
                                                     className="w-8 h-8  border "
                                                     style={{ backgroundColor: c.clr }}
-                                                ></div>
+                                                >
+
+                                                </div>
 
                                                 <p
                                                     className="text-sm text-[var(--black)] " >
                                                     {c.name}
                                                 </p>
-                                            
+                                                <div className='h-full w-[1px] bg-[#262626] opacity-[20%]'></div>
                                             </div>
-                                            
+
                                         ))}
+                                    </div>
                                 </div>
+
+
+                                <button className="mt-10 bg-[var(--brown)] text-white  w-full justify-center font-bold h-[50px]  rounded-full flex items-center gap-3 text-lg tracking-wide hover:opacity-90">
+                                    CATALOGUE DOWNLOAD  <img src={right} alt="" />
+                                </button>
                             </div>
 
-                            {/* ---------- Button ---------- */}
-                            <button className="mt-10 bg-[var(--brown)] text-white  w-full justify-center font-bold h-[50px]  rounded-full flex items-center gap-3 text-lg tracking-wide hover:opacity-90">
-                                CATALOGUE DOWNLOAD  <img src={right} alt="" />
-                            </button>
                         </div>
-
-                </div>
-            </section>
-        </div >
+                    </section>
                 </div >
-            </>
-            );
+            </div >
+
+            <section className='w-full flex justify-center items-center'>
+                <div className='w-[85%] flex flex-col justify-center items-center text-center px-8 '>   
+                    <h3 className='text-[70px] leading-none text-[var(--brown)]'>Product’s</h3>
+                    <h2 className='text-[50px] font-bold'>Description</h2>
+                    <div>
+                        <p className='text-[18px] font-semibold max-sm:text-[13px] max-md:text-[15px]'>
+
+                            This high-quality wall mixer is thoughtfully engineered to enhance both the style and functionality of any modern bathroom. Designed with
+                            a special provision for an overhead shower, it allows you to create a complete and comfortable showering setup without the need for
+                            additional fittings. The mixer features a 115mm long bend pipe positioned on the upper side, ensuring a smooth and direct water flow
+                            to the overhead shower. reach, improved water direction, and enhanced installation flexibility.
+                        </p>
+                        <p className='text-[18px] font-medium max-sm:text-[13px] max-md:text-[15px]'>
+                            The wall mixer comes with adjustable connecting legs, which make it easy to install on different wall-to-wall distances,
+                            ensuring perfect alignment with existing plumbing systems. These connecting legs are crafted from high-strength materials,
+                            offering durability, stability, and corrosion resistance for long-term performance. Along with this, the product includes
+                            elegant wall flanges that, giving your bathroom a clean, seamless, and premium appearance.
+                        </p>
+                        <p className='text-[18px] font-medium max-sm:text-[13px] max-md:text-[15px]'>
+                            This wall mixer is built to deliver smooth water control, allowing effortless switching between the spout and shower functions.
+                            Its ergonomic design ensures comfortable handling, while its chrome-plated finish adds a luxurious shine and protects the faucet
+                            from scratches, stains, and daily wear.
+                            Perfect for homes, apartments, hotels, and commercial washrooms, this wall mixer offers a blend of superior functionality, durability,
+                            and modern aesthetics. Whether you are renovating your bathroom or setting up a new one, this product provides a reliable and stylish
+                            solution for a complete bathing experience.
+                        </p>
+
+                    </div>
+                </div>
+
+            </section>
+        </>
+    );
 }
