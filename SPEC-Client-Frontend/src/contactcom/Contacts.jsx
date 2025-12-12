@@ -47,12 +47,12 @@ export default function Contacts() {
       <section className='flex justify-center items-center mt-[140px] max-md:h-max'>
 
         <div className='w-[85%] flex justify-center items-center'>
-          <div className='flex justify-between w-full max-md:flex-col max-sm:gap-[50px]  input-res max-md:h-max'>
-            <div className='bg-cn w-[48%] h-[800px] max-sm:h-[450px] max-sm:w-full '>
+          <div className='flex justify-between w-full max-md:flex-col max-sm:gap-[50px] gap-[50px]  input-res max-md:h-max'>
+            <div className='bg-cn w-[48%] h-[800px] max-sm:h-[450px] max-md:w-full max-sm:w-full '>
 
             </div>
 
-            <div className='flex w-[48%] flex-col bg-[#FFF8EE] input-field max-sm:py-[50px] justify-start max-sm:items-center items-start px-[25px] max-sm:w-full'>
+            <div className='flex w-[48%] flex-col bg-[#FFF8EE] max-md:w-full input-field max-sm:py-[50px] justify-start max-sm:items-center items-start px-[25px] max-sm:w-full'>
               <h3 className='text-[var(--brown)]'>spec</h3>
               <h1 className='text-[50px] font-bold leading-none'>Enquire Now</h1>
               <p className='text-[18px] mt-[30px] text-[var(--grey)] max-sm:text-center'>We’re here to assist you with any questions about your orders, products, or services. Please fill out the form below and our support team will respond shortly.</p>
@@ -103,9 +103,10 @@ export default function Contacts() {
         className="
           w-[85%] 
           grid 
-          grid-cols-1
-          md:grid-cols-2
-          lg:grid-cols-3
+          grid-cols-3
+          max-sm:grid-cols-1
+          max-md:grid-cols-2
+          max-lg:grid-cols-2
           gap-5
           con-box
         "

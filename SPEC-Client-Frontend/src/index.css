@@ -300,6 +300,11 @@ nav ul li a:hover{
   
 }
 
+.size-box{
+  border-right: 1px solid #E2E0DE;
+  
+}
+
 
 @layer utilities {
   /* Submenu slide from right */

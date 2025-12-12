@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-
+import right from "../assets/images/ArrowRight(1).svg"
 import f1 from "../assets/images/productmini.png";
 import mainimg from "../assets/images/product.png";
 import caretright from "../assets/images/CaretRight.svg";
@@ -21,16 +21,15 @@ export default function Producthead() {
     const sizes = ["7\"", "9\"", "12\"", "15\"", "18\"", "24\""];
 
     const colors = [
-        { id: 1, name: "Rose Gold", clr: "var(--brown)" },
-        { id: 2, name: "Gold", clr: "var(--yellow)" },
-        { id: 3, name: "Cp Finish", clr: "var(--navyblue)" },
+        { id: 1, name: "Rose Gold", clr: "#D79C8E" },
+        { id: 2, name: "Gold", clr: "var(--brown)" },
+        { id: 3, name: "Cp Finish", clr: "#EDEDED" },
         { id: 4, name: "Black", clr: "var(--black)" },
     ];
 
-  
+
     const [activeImage, setActiveImage] = useState(images[0].url);
     const [activeSize, setActiveSize] = useState("12\"");
-    const [activeColor, setActiveColor] = useState("Black");
 
     return (
         <>
@@ -47,36 +46,36 @@ export default function Producthead() {
                         <p className='gap-2 flex'>Towel Rack</p>
                     </div>
 
-                    <section className="w-full flex justify-center py-10 bg-[var(--bgbrown)] rounded-xl">
-                        <div className="w-[90%] flex gap-10 max-xl:flex-col">
+                    <section className="w-full flex justify-center h-[720px]">
+                        <div className=" flex gap-10 max-xl:flex-col">
 
-                            <div className="flex gap-4 max-xl:order-2">
+                            <div className="flex gap-4 w-[50%] max-xl:order-2">
 
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col h-full justify-between">
                                     {images.map((item) => (
                                         <img
                                             key={item.id}
                                             src={item.url}
                                             onClick={() => setActiveImage(item.url)}
-                                            className={`w-20 h-20 object-cover rounded cursor-pointer border transition 
+                                            className={`w-40 h-40 object-cover rounded cursor-pointer border transition 
                                                 ${activeImage === item.url ? "border-[var(--brown)]" : "border-transparent"}`}
                                             alt=""
                                         />
                                     ))}
                                 </div>
 
-                          
+
                                 <div className="flex-1">
                                     <img
                                         src={activeImage}
                                         alt="main"
-                                        className="w-full h-[450px] object-cover rounded-lg shadow-md"
+                                        className="w-full h-full object-cover rounded-lg shadow-md"
                                     />
                                 </div>
 
                             </div>
 
-                            <div className="flex-1 max-xl:order-1">
+                            <div className="flex flex-col max-xl:order-1 justify-between w-[50%]">
                                 <div className="flex items-center gap-2 text-[var(--brown)] text-xl">
                                     <p><img src={star} alt="" className='w-5' /></p>
                                     <p className="text-[var(--grey-text)] text-sm">(5.0)</p>
@@ -96,15 +95,15 @@ export default function Producthead() {
                                     proper water flow direction and easy connection to the shower arm.
                                 </p>
 
-                          
+
                                 <div className="mt-6">
                                     <h2 className="font-semibold text-[var(--black)] text-[22px] mb-2">Size:</h2>
-                                    <div className="flex gap-3 flex-wrap">
+                                    <div className="flex border border-[#E2E0DE] font-medium text-[18px]">
                                         {sizes.map((size) => (
                                             <button
                                                 key={size}
                                                 onClick={() => setActiveSize(size)}
-                                                className={`px-4 py-2 rounded border transition 
+                                                className={`px-4 py-2 w-full size-box transition 
                                                     ${activeSize === size
                                                         ? "bg-[var(--brown)] text-white border-[var(--brown)]"
                                                         : "border-[var(--grey-text)] text-[var(--b-grey)]"
@@ -120,39 +119,39 @@ export default function Producthead() {
                                 <div className="mt-6">
                                     <h2 className="font-semibold text-[var(--black)] mb-2 text-[22px]">Colors:</h2>
 
-                                    <div className="flex gap-4 flex-wrap">
+                                    <div className="flex gap-4 flex-wrap justify-between">
                                         {colors.map((c) => (
                                             <div
                                                 key={c.id}
-                                                onClick={() => setActiveColor(c.name)}
+                                               
                                                 className="flex items-center gap-2 cursor-pointer"
                                             >
                                                 <div
-                                                    className={`w-5 h-5 rounded-full border 
-                                                        ${activeColor === c.name ? "border-[var(--black)]" : "border-gray-300"}`}
+                                                    className="w-8 h-8  border "
                                                     style={{ backgroundColor: c.clr }}
                                                 ></div>
+
                                                 <p
-                                                    className={`text-sm 
-                                                        ${activeColor === c.name ? "text-[var(--black)]" : "text-[var(--grey-text)]"}`}
-                                                >
+                                                    className="text-sm text-[var(--black)] " >
                                                     {c.name}
                                                 </p>
+                                            
                                             </div>
+                                            
                                         ))}
-                                    </div>
                                 </div>
-
-                                {/* ---------- Button ---------- */}
-                                <button className="mt-10 bg-[var(--brown)] text-white px-10 py-4 rounded-full flex items-center gap-3 text-lg tracking-wide hover:opacity-90">
-                                    CATALOGUE DOWNLOAD
-                                </button>
                             </div>
 
+                            {/* ---------- Button ---------- */}
+                            <button className="mt-10 bg-[var(--brown)] text-white  w-full justify-center font-bold h-[50px]  rounded-full flex items-center gap-3 text-lg tracking-wide hover:opacity-90">
+                                CATALOGUE DOWNLOAD  <img src={right} alt="" />
+                            </button>
                         </div>
-                    </section>
+
                 </div>
-            </div>
-        </>
-    );
+            </section>
+        </div >
+                </div >
+            </>
+            );
 }

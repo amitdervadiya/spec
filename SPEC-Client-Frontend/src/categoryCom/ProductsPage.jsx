@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import down from "../assets/images/down.svg";
 import star from "../assets/images/catstar.svg";
 import productImg from "../assets/images/image3.png";
@@ -64,6 +64,17 @@ export default function ProductsPage() {
     if (sortType === "high-low") return b.price - a.price;
     return 0;
   });
+  useEffect(() => {
+  if (mobileFilterOpen) {
+    document.body.style.overflow = "hidden";      // Disable scroll
+  } else {
+    document.body.style.overflow = "auto";        // Enable scroll back
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";        // Cleanup
+  };
+}, [mobileFilterOpen]);
 
   return (
     <>
@@ -118,7 +129,7 @@ export default function ProductsPage() {
 
     
 
-    <div className={`fixed top-0 left-0 bg-white1 z-50 w-[75%] h-full gap-4 flex flex-col  p-5 transition-all duration-500 sm:hidden
+    <div className={`fixed top-0 left-0 bg-white1 z-50 w-[75%] h-full gap-4 flex flex-col  p-5 transition-all duration-500 lg:hidden
   ${mobileFilterOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}`}
 >
 
@@ -176,7 +187,7 @@ export default function ProductsPage() {
      
 
         <div className="flex items-center py-2 justify-between mb-1 ">
-          <p className="text-[var(--black)] text-[18px] font-medium max-sm:hidden">
+          <p className="text-[var(--black)] text-[18px] font-medium max-sm:hidden max-lg:hidden">
             {sortedProducts.length} products
           </p>
              <div
@@ -213,9 +224,9 @@ export default function ProductsPage() {
 
         <div className="grid grid-cols-3 max-2xl:grid-cols-3  mt-[15px] gap-6 max-sm:gap-[10px] max-lg:grid-cols-2 max-sm:grid-cols-2">
           {sortedProducts.map((p, idx) => (
-            <div key={idx} className="bg-white slide-ac flex flex-col   max-sm:h-max  border group">
-              <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" />
-              <div className="p-4 gap-[15px] max-sm:h-[140px] justify-between 5 max-sm:px-[10px] max-sm:py-[20px] max-sm:gap-[10px]   view-bg flex flex-col">
+            <div key={idx} className="bg-white slide-ac flex flex-col  justify-between   max-sm:h-max  border group">
+            <div>  <img src={p.image} className="h-[350px] w-full max-sm:h-[137px]" /></div>
+              <div className="p-4 gap-[15px] max-sm:h-[140px] h-[202px]  justify-between 5 max-sm:px-[10px] max-sm:py-[20px] max-sm:gap-[10px]   view-bg flex flex-col">
                 <div className="flex items-center justify-between ">
                   <div className="flex gap-[2px]">
                     {Array(p.rating).fill(0).map((_, sIdx) => (
@@ -228,7 +239,7 @@ export default function ProductsPage() {
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-[var(--black)] 2xl:text-[22px]  text-[16px] font-bold max-sm:text-[14px] h-white">
+                  <h2 className="text-[var(--black)] 2xl:text-[22px] max-xl:text-[15px]  text-[16px] font-bold max-sm:text-[14px] h-white">
                     {p.name}
                   </h2>
                   <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden h-white">
