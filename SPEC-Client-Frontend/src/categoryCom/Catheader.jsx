@@ -19,7 +19,7 @@ export default function Catheader() {
             <a href="" className='gap-2 flex '>Towel Rack</a>
           </div>
           <div>  <h5 className='text-[70px] max-sm:text-[35px] text-[var(--brown)]  leading-none'>bath </h5>
-            <h4 className='text-[70px] max-sm:text-[40px] font-bold text-[var(--black)] leading-none'>towel rack</h4></div>
+            <h4 className='text-[70px] max-sm:text-[40px] font-bold text-[var(--black)] leading-none '>towel rack</h4></div>
         </div>
       </div>
     </>

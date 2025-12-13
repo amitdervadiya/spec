@@ -234,19 +234,19 @@ export default function ProductsPage() {
                     ))}
                   </div>
 
-                  <p className="text-[var(--grey-text)] font-semibold text-[18px] max-sm:text-[13px] h-white">
+                  <p className="text-[var(--grey-text)] font-semibold text-[18px] max-sm:text-[13px] uppercase h-white">
                     ss : <span className="text-[var(--black)] h-white">{p.steelType}</span>
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-[var(--black)] 2xl:text-[22px] max-xl:text-[15px]  text-[16px] font-bold max-sm:text-[14px] h-white">
+                  <h2 className="text-[var(--black)] 2xl:text-[22px] max-xl:text-[15px] mb-[10px]  text-[16px] font-bold max-sm:text-[14px] h-white">
                     {p.name}
                   </h2>
                   <p className="font-semibold text-[17px] text-[var(--grey-text)] max-sm:hidden h-white">
                     code : <span className="text-[var(--black)] h-white">{p.code}</span>
                   </p>
                 </div>
-                <a href="#" className="text-[var(--brown)] ac-button text-[18px] w-max max-sm:text-[13px]  font-bold flex items-center gap-1">
+                <a href="#" className="text-[var(--brown)] mb-2 ac-button text-[18px] w-max max-sm:text-[13px]  font-bold flex items-center gap-1">
                   VIEW ALL
               <img src={right} alt=""  className="star"/>
                 </a>

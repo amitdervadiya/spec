@@ -93,20 +93,32 @@
    font-size: 70px;
    line-height: 70px;
    line-height: none;
+   text-transform: uppercase
  }
 
  h2 {
    line-height: none;
+    text-transform: uppercase;
  }
 
  h5{
      font-family: "Allison", cursive;
        margin-bottom: -6px;
+        text-transform: uppercase;
 
+ }
+ h4{
+    text-transform: uppercase;
  }
 
  .bor {
    visibility: hidden;
+ }
+
+ ::placeholder{
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
  }
 
  /* Show on hover */
@@ -293,7 +305,7 @@ nav ul li a:hover{
 
 .input1{
   height: 50px;
-  padding-left: 15px;
+  padding-left: 20px;
   background-color: #FFFDFA;
   border:1px solid #E5E5E5;
   border-radius: 60px;
@@ -307,7 +319,7 @@ nav ul li a:hover{
 
 
 @layer utilities {
-  /* Submenu slide from right */
+ 
   .submenu-slide-in {
     animation: submenuIn 0.45s ease forwards;
   }
@@ -336,6 +348,12 @@ nav ul li a:hover{
    line-height: normal !important;
 
    }
+   .bg-contact{
+  background-image: url("assets//images/bgcontact1.png");
+  background-position: center;
+
+
+}
 
    h3 {
    font-size: 30px !important;

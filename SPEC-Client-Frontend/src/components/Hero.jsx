@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 export default function Hero() {
 
     const [current, setCurrent] = useState(0);
-    const swiperRef = useRef(null); // ADD THIS
+    const swiperRef = useRef(null);
     const slides = [
         { id: 1, img: banner1, title: "FLOWS WITH <br> PERFECTION" },
         { id: 2, img: banner1, title: "ELEVATE YOUR <br> SPACE" },
@@ -39,7 +39,7 @@ export default function Hero() {
                         prevEl: ".hero-prev-btn",
                     }}
                  onSlideChange={(swiper) => setCurrent(swiper.realIndex)}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)} // ADD THIS
+                    onSwiper={(swiper) => (swiperRef.current = swiper)} 
                     pagination={{
                         clickable: true,
                         el: ".hero-dots",
@@ -81,13 +81,11 @@ export default function Hero() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-
-                {/* Desktop Left Arrow */}
+                
                 <button className="hero-prev-btn absolute left-6 top-1/2 max-sm:hidden -translate-y-1/2 border-[#D9D9D9] border text-white h-[30px] w-[50px] flex justify-center items-center rounded-full z-30">
                     <img src={arrowleft} alt="prev" />
                 </button>
 
-                {/* Desktop Right Arrow */}
                 <button className="hero-next-btn absolute right-6 top-1/2 max-sm:hidden -translate-y-1/2 border-[#D9D9D9] border text-white h-[30px] w-[50px] flex justify-center items-center p-3 rounded-full z-30">
                     <img src={rightarrow} alt="next" />
                 </button>
