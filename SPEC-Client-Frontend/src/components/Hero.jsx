@@ -1,5 +1,5 @@
 
-import { useState,useRef } from "react";
+import { useState, useRef } from "react";
 import dot from "../assets/images/nav-dot.svg"
 import banner1 from "../assets/images/3.jpg";
 import herobg from "../assets/images/Mask group.png";
@@ -38,8 +38,8 @@ export default function Hero() {
                         nextEl: ".hero-next-btn",
                         prevEl: ".hero-prev-btn",
                     }}
-                 onSlideChange={(swiper) => setCurrent(swiper.realIndex)}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)} 
+                    onSlideChange={(swiper) => setCurrent(swiper.realIndex)}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
                     pagination={{
                         clickable: true,
                         el: ".hero-dots",
@@ -81,7 +81,7 @@ export default function Hero() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                
+
                 <button className="hero-prev-btn absolute left-6 top-1/2 max-sm:hidden -translate-y-1/2 border-[#D9D9D9] border text-white h-[30px] w-[50px] flex justify-center items-center rounded-full z-30">
                     <img src={arrowleft} alt="prev" />
                 </button>
@@ -90,24 +90,24 @@ export default function Hero() {
                     <img src={rightarrow} alt="next" />
                 </button>
 
-              <div className="sm:hidden flex justify-center mt-4 gap-2 absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
-  {slides.map((_, i) => (
-    <button
-      key={i}
-      onClick={() => {
-        setCurrent(i);
-        swiperRef.current?.slideToLoop(i);
-      }}
-      className="focus:outline-none"
-    >
-      {current === i ? (
-        <img src={dot} className="w-[15px] h-[15px]" alt="active dot" />
-      ) : (
-        <div className="w-[9px] h-[9px] rounded-full bg-[#CECECE]" />
-      )}
-    </button>
-  ))}
-</div>
+                <div className="sm:hidden flex justify-center mt-4 gap-2 absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
+                    {slides.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => {
+                                setCurrent(i);
+                                swiperRef.current?.slideToLoop(i);
+                            }}
+                            className="focus:outline-none"
+                        >
+                            {current === i ? (
+                                <img src={dot} className="w-[15px] h-[15px]" alt="active dot" />
+                            ) : (
+                                <div className="w-[9px] h-[9px] rounded-full bg-[#CECECE]" />
+                            )}
+                        </button>
+                    ))}
+                </div>
 
             </section>
         </>

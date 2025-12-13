@@ -93,18 +93,18 @@
    font-size: 70px;
    line-height: 70px;
    line-height: none;
-   text-transform: uppercase
+   text-transform:capitalize;
  }
 
  h2 {
    line-height: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
  }
 
  h5{
      font-family: "Allison", cursive;
        margin-bottom: -6px;
-        text-transform: uppercase;
+        text-transform: capitalize;
 
  }
  h4{
