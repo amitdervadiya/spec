@@ -14,7 +14,7 @@ export default function Products() {
             <img
               src={shower}
               alt="Shower"
-              className=" w-full object-cover max-sm:h-[372px] h-[700px] max-sm:order-2"
+              className=" w-full object-cover max-sm:h-[372px] h-[700px] max-sm:order-2 pr-img"
             />
             <div className='flex justify-center flex-col max-sm:items-center order-1'>
 
@@ -35,7 +35,7 @@ export default function Products() {
             <img
               src={bath}
               alt="Sink"
-              className=" w-[full] object-cover max-sm:h-[372px] h-[700px] "
+              className=" w-[full] object-cover max-sm:h-[372px] h-[700px] pr-img"
             />
           </div>
         </section>

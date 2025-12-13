@@ -12,89 +12,90 @@ import dot from "../assets/images/dot.svg";
 import dothover from "../assets/images/dothover.svg";
 
 export default function OurProducts() {
+const [animate, setAnimate] = useState(false);
 
- const products = [
-  {
-    name: "TUMBLER",
-    image: product1,
-    dotMobile: { top: "48%", left: "41%" },
-    dotTablet: { top: "48%", left: "40%" },
-    dotLaptop: { top: "50%", left: "42%" },
-    dotDesktop: { top: "50%", left: "43%" },
-    dotPc: { top: "50%", left: "44%" },
-    dotUltra: { top: "50%", left: "44%" },
-  },
-  {
-    name: "TOWEL RACK",
-    image: product2,
-    dotMobile: { top: "50%", left: "63%" },
-    dotTablet: { top: "52%", left: "67%" },
-    dotLaptop: { top: "53%", left: "62%" },
-    dotDesktop: { top: "52%", left: "63%" },
-    dotPc: { top: "52%", left: "60%" },
-    dotUltra: { top: "52%", left: "60%" }, // NEW
-  },
-  {
-    name: "SHOWERS",
-    image: product3,
-    dotMobile: { top: "11%", left: "73%" },
-    dotTablet: { top: "12%", left: "78%" },
-    dotLaptop: { top: "10%", left: "71%" },
-    dotDesktop: { top: "10%", left: "70%" },
-    dotPc: { top: "10%", left: "66%" },
-    dotUltra: { top: "10%", left: "67%" }, // NEW
-  },
-  {
-    name: "DISPENSER",
-    image: product4,
-    dotMobile: { top: "17%", left: "83%" },
-    dotTablet: { top: "16%", left: "90%" },
-    dotLaptop: { top: "15%", left: "81%" },
-    dotDesktop: { top: "15%", left: "79%" },
-    dotPc: { top: "15%", left: "74%" },
-    dotUltra: { top: "15%", left: "74%" }, // NEW
-  },
-  {
-    name: "PAPER HOLDER",
-    image: product5,
-    dotMobile: { top: "60%", left: "40%" },
-    dotTablet: { top: "61%", left: "39%" },
-    dotLaptop: { top: "62%", left: "42%" },
-    dotDesktop: { top: "63%", left: "43%" },
-    dotPc: { top: "62%", left: "44%" },
-    dotUltra: { top: "62%", left: "44%" }, // NEW
-  },
-  {
-    name: "SHELF",
-    image: product6,
-    dotMobile: { top: "65%", left: "32%" },
-    dotTablet: { top: "68%", left: "28%" },
-    dotLaptop: { top: "64%", left: "35%" },
-    dotDesktop: { top: "70%", left: "34%" },
-    dotPc: { top: "65%", left: "36%" },
-    dotUltra: { top: "65%", left: "36%" }, // NEW
-  },
-  {
-    name: "FLOOR TRAP", 
-    image: product7,
-    dotMobile: { top: "92%", left: "86%" },
-    dotTablet: { top: "92%", left: "94%" },
-    dotLaptop: { top: "94%", left: "83%" },
-    dotDesktop: { top: "95%", left: "82%" },
-    dotPc: { top: "94%", left: "76%" },
-    dotUltra: { top: "94%", left: "76%" }, // NEW
-  },
-  {
-    name: "WATER TAP",
-    image: product8,
-    dotMobile: { top: "47%", left: "25%" },
-    dotTablet: { top: "48%", left: "20%" },
-    dotLaptop: { top: "50%", left: "39%" },
-    dotDesktop: { top: "49%", left: "37%" },
-    dotPc: { top: "47%", left: "32%" },
-    dotUltra: { top: "47%", left: "32%" }, // NEW
-  },
-];
+  const products = [
+    {
+      name: "TUMBLER",
+      image: product1,
+      dotMobile: { top: "48%", left: "41%" },
+      dotTablet: { top: "48%", left: "40%" },
+      dotLaptop: { top: "50%", left: "42%" },
+      dotDesktop: { top: "50%", left: "43%" },
+      dotPc: { top: "50%", left: "44%" },
+      dotUltra: { top: "50%", left: "44%" },
+    },
+    {
+      name: "TOWEL RACK",
+      image: product2,
+      dotMobile: { top: "50%", left: "63%" },
+      dotTablet: { top: "52%", left: "67%" },
+      dotLaptop: { top: "53%", left: "62%" },
+      dotDesktop: { top: "52%", left: "63%" },
+      dotPc: { top: "52%", left: "60%" },
+      dotUltra: { top: "52%", left: "60%" }, // NEW
+    },
+    {
+      name: "SHOWERS",
+      image: product3,
+      dotMobile: { top: "11%", left: "73%" },
+      dotTablet: { top: "12%", left: "78%" },
+      dotLaptop: { top: "10%", left: "71%" },
+      dotDesktop: { top: "10%", left: "70%" },
+      dotPc: { top: "10%", left: "66%" },
+      dotUltra: { top: "10%", left: "67%" }, // NEW
+    },
+    {
+      name: "DISPENSER",
+      image: product4,
+      dotMobile: { top: "17%", left: "83%" },
+      dotTablet: { top: "16%", left: "90%" },
+      dotLaptop: { top: "15%", left: "81%" },
+      dotDesktop: { top: "15%", left: "79%" },
+      dotPc: { top: "15%", left: "74%" },
+      dotUltra: { top: "15%", left: "74%" }, // NEW
+    },
+    {
+      name: "PAPER HOLDER",
+      image: product5,
+      dotMobile: { top: "60%", left: "40%" },
+      dotTablet: { top: "61%", left: "39%" },
+      dotLaptop: { top: "62%", left: "42%" },
+      dotDesktop: { top: "63%", left: "43%" },
+      dotPc: { top: "62%", left: "44%" },
+      dotUltra: { top: "62%", left: "44%" }, // NEW
+    },
+    {
+      name: "SHELF",
+      image: product6,
+      dotMobile: { top: "65%", left: "32%" },
+      dotTablet: { top: "68%", left: "28%" },
+      dotLaptop: { top: "64%", left: "35%" },
+      dotDesktop: { top: "70%", left: "34%" },
+      dotPc: { top: "65%", left: "36%" },
+      dotUltra: { top: "65%", left: "36%" }, // NEW
+    },
+    {
+      name: "FLOOR TRAP",
+      image: product7,
+      dotMobile: { top: "92%", left: "86%" },
+      dotTablet: { top: "92%", left: "94%" },
+      dotLaptop: { top: "94%", left: "83%" },
+      dotDesktop: { top: "95%", left: "82%" },
+      dotPc: { top: "94%", left: "76%" },
+      dotUltra: { top: "94%", left: "76%" }, // NEW
+    },
+    {
+      name: "WATER TAP",
+      image: product8,
+      dotMobile: { top: "47%", left: "25%" },
+      dotTablet: { top: "48%", left: "20%" },
+      dotLaptop: { top: "50%", left: "39%" },
+      dotDesktop: { top: "49%", left: "37%" },
+      dotPc: { top: "47%", left: "32%" },
+      dotUltra: { top: "47%", left: "32%" }, // NEW
+    },
+  ];
 
 
   const [screen, setScreen] = useState("desktop");
@@ -152,25 +153,25 @@ export default function OurProducts() {
             <div className="mx-auto h-[640px] max-sm:h-[214px] max-sm:w-[335px] bg-white border-[15px] max-w-[1545px] border-[#fffdfa] bg-image relative">
 
               <div
-                className="
-                  absolute z-20 bg-white border border-[#eee]
-                  w-[272px] h-[275px] p-[15px] 
-                  -left-[60px]
-                  top-1/2 -translate-y-1/2
-                  max-sm:left-1/2
-                  max-sm:translate-y-[80px]
-                  max-sm:-translate-x-1/2
-                  max-sm:bottom-[10px]
-                  max-sm:w-[152px]
-                  max-sm:h-[168px]
-                  max-sm:p-[10px]
-                  max-lg:w-[178px]
-                  max-lg:h-[168px]
-                  max-lg::p-[10px]
-                  flex flex-col justify-between
-                  
-                "
-              >
+               className={`
+    absolute z-20 bg-white border border-[#eee]
+    w-[272px] h-[275px] p-[15px]
+    -left-[60px]
+    top-1/2 -translate-y-1/2
+    max-sm:left-1/2
+    max-sm:translate-y-[80px]
+    max-sm:-translate-x-1/2
+    max-sm:bottom-[10px]
+    max-sm:w-[152px]
+    max-sm:h-[168px]
+    max-sm:p-[10px]
+    max-lg:w-[178px]
+    max-lg:h-[168px]
+    max-lg:p-[10px]
+    flex flex-col justify-between
+    spec-prod
+    ${animate ? "spec-animate" : ""}
+  `} >
                 <img
                   src={activeProduct.image}
                   alt={activeProduct.name}
@@ -189,27 +190,37 @@ export default function OurProducts() {
                 const position = getDotPosition(product);
 
                 return (
-                  <button
-                    key={index}
-                    onClick={() => setActiveIndex(index)}
-                    className={`
-                      absolute w-[28px] h-[28px] 
-                      max-sm:h-[10px] max-sm:w-[10px]
-                      flex items-center justify-center
-                      transition-all duration-300
-                      ${index === activeIndex ? "scale-125" : "opacity-80"}
-                    `}
-                    style={{
-                      top: position.top,
-                      left: position.left,
-                    }}
-                  >
-                    <img
-                      src={index === activeIndex ? dothover : dot}
-                      alt="dot"
-                      className="w-full h-full object-contain"
-                    />
-                  </button>
+                 <button
+  key={index}
+  onClick={() => {
+    // reset animation
+    setAnimate(false);
+    setActiveIndex(index);
+
+    // re-trigger animation
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setAnimate(true));
+    });
+  }}
+  className={`
+    absolute w-[28px] h-[28px] 
+    max-sm:h-[10px] max-sm:w-[10px]
+    flex items-center justify-center
+    transition-all duration-300
+    ${index === activeIndex ? "scale-125" : "opacity-80"}
+  `}
+  style={{
+    top: position.top,
+    left: position.left,
+  }}
+>
+  <img
+    src={index === activeIndex ? dothover : dot}
+    alt="dot"
+    className="w-full h-full object-contain"
+  />
+</button>
+
                 );
               })}
             </div>
