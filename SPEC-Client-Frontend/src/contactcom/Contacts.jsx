@@ -44,7 +44,7 @@ export default function Contacts() {
 ];
   return (
     <>
-      <section className='flex justify-center items-center mt-[140px] max-md:h-max'>
+      <section className='flex justify-center items-center mt-[140px] max-sm:mt-[50px] max-md:h-max'>
 
         <div className='w-[85%] flex justify-center items-center'>
           <div className='flex justify-between w-full max-md:flex-col max-sm:gap-[50px] gap-[50px]  input-res max-md:h-max'>

@@ -235,7 +235,7 @@ export default function NavbarHero() {
                   <a href="tel:+919879166592">  <p className="text-[14px] font-medium flex items-center gap-2">
                     <img src={h1} alt="" className="w-4 h-4" /> +91 98791 66592
                   </p></a>
-                  <a href="tel: +919016699400">   <p className="text-[14px] font-medium flex items-center gap-2">
+                  <a href="https://wa.me/9016699400" target="_blank">   <p className="text-[14px] font-medium flex items-center gap-2">
                     <img src={h2} alt="" className="w-4 h-4" /> +91 90166 99400
                   </p></a>
                 </div>

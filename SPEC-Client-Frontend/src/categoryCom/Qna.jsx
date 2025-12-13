@@ -5,7 +5,7 @@ export default function Qna() {
     return (
 
         <>
-            <div className='h-[250px] mt-[150px] flex justify-center w-full mb-[140px] max-sm:mb-[50px]'>
+            <div className='h-[250px] mt-[140px] max-sm:mt-[50px] flex justify-center w-full mb-[140px] max-sm:mb-[50px]'>
                 <div className='w-[85%] bg-[var(--brown)]   max-sm:gap-[20px] max-sm:flex-col max-sm:h-max flex justify-between max-sm:px-3 max-sm:py-5 px-[50px] items-center'>
                     <div className=' max-sm:px-2 gap-4 flex flex-col'>
                         <h2 className='text-[40px] max-sm:text-[28px]  font-semibold text-white'>Need help in buying?</h2>

@@ -78,8 +78,8 @@ export default function ProductsPage() {
 
   return (
     <>
-   <div className="flex justify-center items-center w-full">
-    <div className="w-[85%]  flex gap-10 mt-[130px] relative max-lg:flex-col">
+   <div className="flex justify-center items-center mt-[140px] max-sm:mt-[50px]  w-full">
+    <div className="w-[85%]  flex gap-10 relative max-lg:flex-col">
       <div className="w-[285px] max-lg:hidden h-max ">
         <div className="px-5 rounded-full border border-[#2A2928] w-max flex border-opacity-[20%] h-[50px] mb-4 justify-center items-center">
           <p className="text-[var(--brown)] flex gap-2 font-medium text-sm">

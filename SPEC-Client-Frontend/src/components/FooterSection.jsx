@@ -100,14 +100,14 @@ export default function FooterSection() {
           {openMenu === "contact" && (
             <div className="mt-2 flex flex-col gap-4 text-[16px] text-[var(--grey-text)]">
               <div className="flex gap-2 items-center">
-                <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt="" className="w-5 h-5" /> +91 98791 66592</a>
+                <a href="tel:+9879166592" className="flex gap-[10px]" >   <img src={fp} alt="" className="w-5 h-5 mt-1" /> +91 98791 66592</a>
 
               </div>
-              <div className="flex gap-2 items-start">
+              <div className="flex gap-2 items-center ">
                 <img src={fmap} className="h-5 w-5 mt-1" /> Kotarda, Rajkot, Gujarat 360022
               </div>
               <div className="flex gap-2 items-center text-[#00A198]">
-                <img src={ef} className="h-5 w-5" /> spec@infospecco.in
+                <img src={ef} className="h-5 w-5 " /> spec@infospecco.in
               </div>
 
               {/* Socials */}
@@ -156,12 +156,11 @@ export default function FooterSection() {
       <footer className="bg-[var(--black)] max-2xl:h-max max-xl:h-max z-0 max-lg:h-max max-sm:justify-center  relative   max-sm:h-max max-md:h-max flex flex-col items-center text-white ">
 
 
-        <div className="mt-[190px] max-sm:gap-[35px] max-xl:gap-[50px] max-2xl:gap-[50px] flex max-lg:flex-col gap-[200px] max-[1700px]:gap-[100px] max-sm:flex-col  w-[85%]">
+        <div className="mt-[190px]  max-sm:gap-[35px] max-xl:gap-[50px] max-2xl:gap-[50px] flex max-lg:flex-col gap-[200px] max-[1700px]:gap-[100px] max-sm:flex-col  w-[85%]">
 
           <div className="w-[30%] max-lg:w-full  max-sm:flex max-sm:flex-col max-sm:items-center max-sm:w-[100%]">
             <h3 className="text-[40px]  max-sm:text-center text-[var(--brown)] leading-none">Discover The</h3>
             <h2 className="text-[35px] md:w-[90%] max-sm:w-[335px]  font-bold w-max max-sm:text-center max-2xl:text-[30px]  mb-[35px] max-sm:text-[30px]">ART OF MODERN  LIVING</h2>
-
             <div className="flex flex-col gap-[30px] w-[500px] max-[1600px]:w-[350px] max-sm:w-full max-xl:w-full max-2xl:w-[300px]">
               <input type="text" placeholder="Name" className="bg-transparent text-[var(--b-grey)] border-b  border-[var(--b-grey)] pb-[15px] outline-none text-[20px]" />
               <input type="email" placeholder="Email" className="bg-transparent border-b  border-[var(--b-grey)] pb-[15px] outline-none text-[20px]" />
